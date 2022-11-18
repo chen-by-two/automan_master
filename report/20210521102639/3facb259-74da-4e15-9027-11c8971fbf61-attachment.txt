@@ -1,0 +1,18 @@
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "0000"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"306","account":"18099990000","member_id":"15961232","full_name":"\u5f20\u5927\u4ed9","created_at":"2020-03-11 01:09:59","updated_at":"2021-05-21 10:27:27","last_login_at":"2021-05-21 10:27:29","head_img":"","role":"\u52a9\u624b\u5185\u90e8\u4e13\u7528","role_id":"0","v4_role_id":"ZS1048","token":"7f2710f0-246f-4af3-882b-6077ca9ea2eb"}}
+INFO     root:assistantappApi.py:22 /user/logindone	账号登录
+INFO     root:CommonKeyWord.py:70 token：7f2710f0-246f-4af3-882b-6077ca9ea2eb
+INFO     root:HttpTools.py:56 {"mobile": "15122222223", "sendMethod": "sms", "usage": "register"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{}}
+INFO     root:assistantappApi.py:1271 /v4/code/senddone	添加店员获取验证码
+INFO     root:CommonKeyWord.py:70 V4CodeSenderrno:0
+INFO     root:CommonKeyWord.py:70 添加店员验证码断言结果：0
+INFO     root:CommonKeyWord.py:70 sql:SELECT captcha FROM `cn_uniondrug_module_data`.`captcha` where mobile = 15122222223 ORDER BY id desc LIMIT 1;
+INFO     root:CommonKeyWord.py:70 sql查询结果：[{'captcha': '1853'}]
+INFO     root:CommonKeyWord.py:70 验证码：1853
+INFO     root:HttpTools.py:56 {"partnerId": "92910", "storeId": "106017", "fullName": "\u81ea\u52a8\u53161", "account": "15122222223", "code": "1853", "role": 2, "jobNumber": "", "userId": "306", "partnerName": "\u5e7f\u5dde\u6c11\u4fe1", "storeName": "\u949f\u843d\u6f6d\u5206\u5e97", "autoLogin": 0, "newAide": "1"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"token":"","id":"200698","memberId":"15966201","account":"15122222223","mobile":"","fullName":"","role":"2","partnerId":"0","storeId":"0","status":"1"}}
+INFO     root:assistantappApi.py:1250 /assistant/registerdone	门店管理添加店员
+INFO     root:CommonKeyWord.py:70 AssistantRegistererrno:0
+INFO     root:CommonKeyWord.py:70 添加店员断言结果：0
+INFO     root:CommonKeyWord.py:70 sql:DELETE from cn_uniondrug_module_clerk.assistant where account = 15122222223;222.0

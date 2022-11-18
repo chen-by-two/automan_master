@@ -1,0 +1,3 @@
+#AutoMan
+HELLO
+WORLD

@@ -1,0 +1,3 @@
+INFO     root:HttpTools.py:56 {"couponIds": ["164691929914300011", "164691842655700016"]}
+INFO     root:HttpHandler.py:41 {"errno":0,"error":"请求成功","dataType":"LIST","data":[{"schemeId":"20220310211421443194","tagId":292}],"fail":false,"success":true}
+INFO     root:promoteCenterApi.py:371 /outScheme/querySchemeAndTag	done	券ID批量查询方案ID和标签ID

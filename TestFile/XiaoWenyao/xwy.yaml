@@ -1,0 +1,15 @@
+env:
+  turboradio.cn
+mobile:
+  15651711729
+captcha:
+  2046
+getLoginCaptcha:
+  #查询公众号手机登录验证码的
+  SELECT `data` FROM `cn_uniondrug_module_sms`.`message` WHERE mobile = "15651711729" ORDER BY gmtCreated DESC LIMIT 1;
+getLoginCaptchaBackCenter:
+  #查询药联后台手机登录验证码
+  SELECT captcha FROM `cn_uniondrug_module_data`.`captcha` where mobile = '15651711729' ORDER BY id desc LIMIT 1
+Assert:
+  #个人中心数据统计断言
+  '0'

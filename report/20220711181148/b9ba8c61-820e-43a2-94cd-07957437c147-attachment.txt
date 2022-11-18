@@ -1,0 +1,3 @@
+INFO     root:HttpTools.py:56 {"couponList": ["164691929914300011", "164691842655700016"]}
+INFO     root:HttpHandler.py:41 {"errno":0,"error":"","dataType":"OBJECT","data":{"body":[{"couponId":"164691842655700016","schemeId":"20220310211421443194","cardId":"8a2b1009515847d1a0fc","tagId":292,"schemePromote":"有扣率方案","schemeName":"有扣率方案","cardType":1,"cardName":"有扣率方案","cardDescription":"有扣率方案"},{"couponId":"164691929914300011","schemeId":"20220310211421443194","cardId":"8a2b1009515847d1a0fc","tagId":292,"schemePromote":"有扣率方案","schemeName":"有扣率方案","cardType":1,"cardName":"有扣率方案","cardDescription":"有扣率方案"}]},"success":true,"fail":false}
+INFO     root:promoteCenterApi.py:329 /coupon/querySchemeInfo	done	客服系统通过券列表调用营销中心查询方案提示

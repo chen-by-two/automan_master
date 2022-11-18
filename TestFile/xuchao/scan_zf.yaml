@@ -1,0 +1,199 @@
+qrcode_scan:
+  -
+    data:
+      code: code_value
+    key: TURAPP
+    method: post
+    url: /v4/qrcode/scan
+
+token_issue:
+-
+  data:
+    channel: 10
+    data:
+    - key: accountId
+      value: 0
+    - key: memberId
+      value: 15970572
+    - key: equityNo
+      value: 0
+    - key: orderChannel
+      value: wechat
+    - key: processTag
+      value: 1
+    memberId: 15970572
+    time: 3600
+  key: token
+  method: post
+  url: /token/issue
+
+addCart:
+  -
+    data:
+      scanResult:
+        code: mod_code
+        channel: 10
+        memberId: mod_memberId
+        accountId: 0
+        equityNo: 0
+        orderChannel: wechat
+        processTag: 1
+        requestNo: mod_requestNo
+      discountAmount: 0.00
+      orderMethod: 3
+      totalAmount: 22.30
+      gmtScanAt: mod_time
+      goodsCouponAmount: 0.00
+      saleAmount: 22.30
+      drugs:
+        -
+          goodsType: 1
+          isRule: 0
+          totalPrice: 22.30
+          pack: 盒
+          originalPrice: 22.30
+          commonFullPinyin:
+            commonFullPinyin: ganmaolingkeli
+            memberPrice: 22.30
+            originalPrice: 22.30
+            image: http://uniondrug.oss-cn-hangzhou.aliyuncs.com/Icon/drug_common.png
+            attrs:
+            cates:
+            skuNo:
+            realName:
+            goodsType: 1
+            goodsSubType: 11
+          goodsSubType: 11
+          image: http://uniondrug.oss-cn-hangzhou.aliyuncs.com/Icon/drug_common.png
+          activityAfterAmount: 22.30
+          fromDrugInternalId:
+          directPrice: 0
+          approvalNumber: 国药准字Z44021940
+          tradeCode:
+          activities:
+            -
+          manufacturer: 华润三九医药股份有限公司委托华润三九(枣庄)药业有限公司
+          isDtp: 0
+          internalId: 1261838
+          commonName: 感冒灵颗粒
+          quantity: 1
+          memberPrice: 22.30
+          isSuper: false
+          buyGifts: 0
+          unitPrice: 22.30
+          isActivity: 0
+          batchInfo:
+            -
+          isRx: 0
+          discountPrice: 0
+          coupons:
+            -
+          form: 10g*9袋
+          isDrug: 1
+          activityAmount: 0
+      directAmount: 0.00
+      tid: mod_tid
+      couponAmount: 0.00
+      activityAmount: 0.00
+    key: TURAPP
+    method: post
+    url: /v4/orders/addCart
+
+drugsActivities:
+  -
+    data:
+      memberId: mod_memberId
+      dtpOrCommon: 2
+      drugs:
+        -
+          tradeCode: ""
+          quantity: 1
+          internalId: 1261838
+          isDtp: 0
+          count: 1
+          memberPrice: 22.30
+          pack: 盒
+          approvalNumber: 国药准字Z44021940
+          originalPrice: 22.30
+          commonName: 感冒灵颗粒
+          isDrug: 1
+          form: 10g*9袋
+          unitPrice: 22.30
+      scanResult:
+        code: mod_code
+        channel: 10
+        memberId: mod_memberId
+        accountId: 0
+        equityNo: 0
+        orderChannel: wechat
+        processTag: 1
+        requestNo: mod_requestNo
+    key: TURAPP
+    method: post
+    url: /v4/drugs/drugsActivities
+
+
+createPreOrder:
+  -
+    data:
+      waterNo: mod_waterNo
+      scanResult:
+        code: mod_cod
+        channel: 10
+        memberId: mod_memberId
+        accountId: 0
+        equityNo: 0
+        orderChannel: wechat
+        processTag: 1
+        requestNo: mod_requestNo
+    key: TURAPP
+    method: post
+    url: /v4/orders/createPreOrder
+
+
+addJudge:
+  -
+    data:
+      requestNo: mod_requestNo
+    key: TURPM
+    method: post
+    url: /drugUser/addJudge
+
+
+applyRx:
+  -
+    data:
+        prescriptionPhoto:
+          - https://uniondrug-release.oss-cn-shanghai.aliyuncs.com/backend.app/l6oe3qfd8gf55q4elb3j1nk445.jpg
+        offLineApply:
+          userName: 张海港
+          userMobile:
+          prescriptionPhoto:
+            -
+              https://uniondrug-release.oss-cn-shanghai.aliyuncs.com/backend.app/l6oe3qfd8gf55q4elb3j1nk445.jpg
+        type: 2
+        requestNo: mod_requestNo
+        orderNo:
+        drugUserId: 393
+    key: TURPM
+    method: post
+    url: /rx/applyRx
+
+
+
+init:
+  -
+    data:
+      requestNo: mod_requestNo
+    key: TURPM
+    method: post
+    url: /order/init
+
+
+createOrder:
+  -
+    data:
+      requestNo: mod_requestNo
+    key: TURPM
+    method: post
+    url: /order/createOrder

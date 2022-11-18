@@ -1,0 +1,17 @@
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "0000"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"306","account":"18099990000","member_id":"15961232","full_name":"\u5f20\u5927\u4ed9","created_at":"2020-03-11 01:09:59","updated_at":"2021-05-21 14:07:30","last_login_at":"2021-05-21 14:07:32","head_img":"","role":"\u52a9\u624b\u5185\u90e8\u4e13\u7528","role_id":"0","v4_role_id":"ZS1048","token":"b9a9f2b3-a69c-4666-9656-c14c3b5a295c"}}
+INFO     root:assistantappApi.py:22 /user/logindone	账号登录
+INFO     root:CommonKeyWord.py:70 token：b9a9f2b3-a69c-4666-9656-c14c3b5a295c
+INFO     root:HttpTools.py:56 {"workId": "66666"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{}}
+INFO     root:assistantappApi.py:1502 /work/accept	done	领取门店任务
+INFO     root:HttpTools.py:56 {"appealInfo": {}, "appealReason": 3, "communicateType": 2, "workId": "66666"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"281","userId":"306","userName":"","userMobile":"","workId":"66666","workType":"0","workTypeText":"","workRelatedId":"0","assignTime":"","cancelTime":"","arrivalTime":"","departureTime":"","durationTime":"","assignCount":"0","workStatus":"0","workStatusText":"","chainName":"","storeId":"0","storeName":"","storestatus":"0","storestatusText":"","communicateType":"2","communicateTypeText":"\u7535\u8bdd\/\u8bed\u8a00\/\u89c6\u9891\u6c9f\u901a","communicateImages":[],"remark":"","summary":[],"appealReason":"3","appealInfo":{"timeLackReason":"","addrBefore":{"address":"","longitude":"0","latitude":"0"},"addrAfter":{"address":"","longitude":"0","latitude":"0"}}}}
+INFO     root:assistantappApi.py:1534 /workRecord/create	done	完成线上门店任务
+INFO     root:CommonKeyWord.py:70 WorkRecordStarterrno:0
+INFO     root:HttpTools.py:56 {"communicateImages": ["http://uniondrug-release.oss-cn-shanghai.aliyuncs.com/backend.assistant/qalrl3lteu3ngf7hoks22qqvc6.jpg"], "communicateType": 2, "remark": "\u7ebf\u4e0a\u62dc\u8bbf\u81ea\u52a8\u5316\u6d4b\u8bd5\u7ed3\u675f", "summary": ["5", "6"], "workId": "66666"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"281","userId":"306","userName":"","userMobile":"","workId":"66666","workType":"0","workTypeText":"","workRelatedId":"0","assignTime":"","cancelTime":"","arrivalTime":"","departureTime":"","durationTime":"","assignCount":"0","workStatus":"0","workStatusText":"","chainName":"","storeId":"0","storeName":"","storestatus":"0","storestatusText":"","communicateType":"2","communicateTypeText":"\u7535\u8bdd\/\u8bed\u8a00\/\u89c6\u9891\u6c9f\u901a","communicateImages":["http:\/\/uniondrug-release.oss-cn-shanghai.aliyuncs.com\/backend.assistant\/qalrl3lteu3ngf7hoks22qqvc6.jpg"],"remark":"\u7ebf\u4e0a\u62dc\u8bbf\u81ea\u52a8\u5316\u6d4b\u8bd5\u7ed3\u675f","summary":["5","6"],"appealReason":"3","appealInfo":{"timeLackReason":"","addrBefore":{"address":"","longitude":"0","latitude":"0"},"addrAfter":{"address":"","longitude":"0","latitude":"0"}}}}
+INFO     root:assistantappApi.py:1566 /workRecord/complete	done	完成线上门店任务
+INFO     root:CommonKeyWord.py:70 WorkRecordCompleteerrno:0
+INFO     root:CommonKeyWord.py:70 完成门店电话语音任务断言结果：0
+INFO     root:CommonKeyWord.py:70 门店任务列表断言结果：1

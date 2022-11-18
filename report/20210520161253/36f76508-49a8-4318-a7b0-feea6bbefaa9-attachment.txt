@@ -1,0 +1,9 @@
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "0000"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"306","account":"18099990000","member_id":"15961232","full_name":"\u5f20\u5927\u4ed9","created_at":"2020-03-11 01:09:59","updated_at":"2021-05-20 16:14:08","last_login_at":"2021-05-20 16:14:08","head_img":"","role":"\u52a9\u624b\u5185\u90e8\u4e13\u7528","role_id":"0","v4_role_id":"ZS1048","token":"23a6954c-1fce-43b0-a010-eff92c81ae38"}}
+INFO     root:assistantappApi.py:22 /user/logindone	账号登录
+INFO     root:CommonKeyWord.py:70 token：23a6954c-1fce-43b0-a010-eff92c81ae38
+INFO     root:HttpTools.py:56 {"workId": "88888"}
+INFO     root:HttpHandler.py:41 {"errno":"280002","error":"\u4efb\u52a1\u5df2\u7ecf\u9886\u53d6\u8fc7\u4e86,\u8bf7\u5237\u65b0\u4efb\u52a1\u5217\u8868\u91cd\u8bd5","dataType":"ERROR","data":{}}
+INFO     root:assistantappApi.py:1502 /work/accept	done	领取门店任务
+INFO     root:CommonKeyWord.py:70 WorkCancelerrno:280002
+INFO     root:CommonKeyWord.py:70 开始门店任务断言结果：0

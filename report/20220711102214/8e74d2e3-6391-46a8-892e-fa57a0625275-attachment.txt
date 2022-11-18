@@ -1,0 +1,3 @@
+INFO     root:HttpTools.py:56 {"orderNo": "92031011603301080188"}
+INFO     root:HttpHandler.py:41 {"errno":130014,"error":"此订单无赠送项目 ","dataType":"ERROR","data":{},"success":false,"fail":true}
+INFO     root:promoteCenterApi.py:392 /card/queryGiftDetail	done	通过主订单号查询赠送权益入口

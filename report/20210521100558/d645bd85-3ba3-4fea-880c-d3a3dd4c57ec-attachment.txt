@@ -1,0 +1,9 @@
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "0000"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"306","account":"18099990000","member_id":"15961232","full_name":"\u5f20\u5927\u4ed9","created_at":"2020-03-11 01:09:59","updated_at":"2021-05-21 10:06:59","last_login_at":"2021-05-21 10:07:01","head_img":"","role":"\u52a9\u624b\u5185\u90e8\u4e13\u7528","role_id":"0","v4_role_id":"ZS1048","token":"96a44d5c-9263-4568-9ccf-187a471a48c2"}}
+INFO     root:assistantappApi.py:22 /user/logindone	账号登录
+INFO     root:CommonKeyWord.py:70 token：96a44d5c-9263-4568-9ccf-187a471a48c2
+INFO     root:HttpTools.py:56 {"assistantId": "200268", "storeId": "125755"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"assistantId":"200268","storeId":"125755"}}
+INFO     root:assistantappApi.py:1387 /assistant/storeTransferdone	店员管理调店
+INFO     root:CommonKeyWord.py:70 AssistantStoreTransfererrno:0
+INFO     root:CommonKeyWord.py:70 编辑门店信息断言结果：0

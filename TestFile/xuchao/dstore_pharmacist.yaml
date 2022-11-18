@@ -1,0 +1,43 @@
+#商保药师项目
+
+-
+  #获取项目下的药师无分页列表
+  key: PHARMACIST
+  url: /project/assistant/getProjectAssistants
+  method: post
+  data:
+    projectId: 0
+    projectSn:
+  Assert:
+    errno: '0'
+
+-
+  #根据项目类型获取项目详情
+  key: PHARMACIST
+  url: /project/getProjectByType
+  method: post
+  data:
+    projectType: 1
+  Assert:
+    errno: '0'
+
+-
+  #判断某个药师是否是某个项目下的明星药师
+  key: PHARMACIST
+  url: /project/isStarPharmacist
+  method: post
+  data:
+  Assert:
+    errno: '0'
+
+-
+  #获取用户和药师的进行中的会话
+  key: PHARMACIST
+  url: /conversation/getUnfinishedConversation
+  method: post
+  data:
+    memberId: 0
+    assistantId: 0
+    assistantMemberId: 0
+  Assert:
+    errno: '0'

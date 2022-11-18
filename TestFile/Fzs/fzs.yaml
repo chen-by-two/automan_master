@@ -1,0 +1,101 @@
+# 测试环境 优惠权益方案数据预置
+mobile:
+  # 后台登录帐号
+  15952059927
+updateCapthaAll:
+  # 初始化后台验证码
+  UPDATE `cn_uniondrug_module_data`.`captcha` SET `status` = 0 WHERE `mobile` = 15952059927;
+updateCaptchaCode:
+  #设定后台登录验证码
+  UPDATE `cn_uniondrug_module_data`.`captcha` SET `status`= 1 , `gmtExpired` = '2100-01-01 00:00:01' WHERE id = 3471809;
+LoginCaptcha:
+  # 后台验证码-写死
+  123456
+serialId:
+  # 断言预置
+  1650873465025307691
+envt:
+  turboradio.cn
+envr:
+  uniondrug.net
+deletePayment:
+  #删除历史付款单
+  DELETE from `cn_uniondrug_middleend_coin`.`payment` where `serial_id` = 1650873465025307691;
+selectPaymentCode:
+  #查询付款单号
+  SELECT payment_code from `cn_uniondrug_middleend_coin`.`payment` where `serial_id` = 1650873465025307691;
+deleteGrOrderGoods:
+  #删除商品替换订单数据
+  DELETE from `cn_uniondrug_union_finance`.`gr_order_goods` where `order_no` = 92050611603434670103;
+selectGrOrderGoods:
+  #查询商品替换订单数据
+  select order_no from `cn_uniondrug_union_finance`.`gr_order_goods` where `order_no` = 92050611603434670103;
+grOrderGoodsOrderno:
+  #/replace/replaceOne的测试订单号
+  92050611603434670103
+updateCleanStatus:
+  #/clean/order/finish的预置测试数据
+  update `cn_uniondrug_union_finance`.`cc_order` set `clean_status` = 0 where `order_no` = 92051311603454080221;
+selectCleanStatus:
+  #/clean/order/finish的预置测试数据
+  select clean_status from `cn_uniondrug_union_finance`.`cc_order` where `order_no` = 92051311603454080221;
+deleteCcOut:
+  #/clean/rdx/mbs的预置测试数据
+  DELETE from `cn_uniondrug_union_finance`.`cc_out` where `order_no` = 92022211603256390282;
+selectCcOut:
+  #/clean/rdx/mbs的预置测试数据
+  select order_no from `cn_uniondrug_union_finance`.`cc_out` where `order_no` = 92022211603256390282;
+ccOutOrderNo:
+  #/clean/rdx/mbs的预置测试数据
+  92022211603256390282
+updateSettlegood:
+  update `cn_uniondrug_union_finance`.`cc_order_info` set `settle_good` = 0 where `order_no` = 92052311603473190183;
+selectSettlegood:
+  select settle_good from `cn_uniondrug_union_finance`.`cc_order_info` where `order_no` = 92052311603473190183;
+renewEquityMbsOrderNo:
+  92060911603508390159
+deleteRenewEquityMbsOrderNo:
+  DELETE from `cn_uniondrug_union_finance`.`cc_renew_settle` where `order_no` = 92060911603508390159;
+selectRenewEquityMbsOrderNo:
+  select order_no from `cn_uniondrug_union_finance`.`cc_renew_settle` where `order_no` = 92060911603508390159;
+erpSn:
+  SC-99-20220609-0001
+updateErpSn:
+  update `cn_uniondrug_union_finance`.`cc_order_info` set erp_sn = '' where `order_no` = 92060811603506610170;
+selectErpSn:
+  select erp_sn from `cn_uniondrug_union_finance`.`cc_order_info` where `order_no` = 92060811603506610170;
+updateBankTransfer:
+  update  `cn_uniondrug_middleend_coin`.`bank_transfer` set  status = 1,message = '' where transaction_id = 'FM20220104311523';
+selectBankTransfer:
+  select status from `cn_uniondrug_middleend_coin`.`bank_transfer` where transaction_id = 'FM20220104311523';
+updatePayment:
+  update  `cn_uniondrug_middleend_coin`.`payment` set  pay_status = 1 where payment_code = 'FM20220104311523';
+selectPayment:
+  select pay_status from `cn_uniondrug_middleend_coin`.`payment` where payment_code = 'FM20220104311523';
+deleteFundRecord:
+  delete from `cn_uniondrug_middleend_coin`.`fund_record` where translation_id = '92070411603677670150';
+deleteFundRecordDetail:
+  delete from `cn_uniondrug_middleend_coin`.`fund_record_detail` where order_no = '92070411603677670150';
+updateFundOrder:
+  update  `cn_uniondrug_middleend_coin`.`fund_order` set  audit = 0,del = 0 where order_no = '92070411603677670150';
+selectFundRecord:
+  select translation_id from `cn_uniondrug_middleend_coin`.`fund_record` where translation_id = '92070411603677670150';
+deleteAttach:
+  delete from cn_uds_archive.attach where order_no = '92080811603766080106';
+selectAttach:
+  select order_no from cn_uds_archive.attach where order_no = '92080811603766080106' AND transaction_snapshot != '' AND complete_snapshot != '';
+deleteHealthOrderItem:
+  delete from cn_uniondrug_union_finance.cc_health_claim_item where order_no = '92081111603773141751';
+deleteHealthOrderServe:
+  delete from cn_uniondrug_union_finance.cc_health_claim_serve where order_no = '92081111603773141751';
+selectHealthOrderItem:
+  select order_no from cn_uniondrug_union_finance.cc_health_claim_item where order_no = '92081111603773141751';
+selectHealthOrderServe:
+  select order_no from cn_uniondrug_union_finance.cc_health_claim_serve where order_no = '92081111603773141751';
+deleteGoodsInformation:
+  delete from cn_uniondrug_union_finance.goods_information where approval_number = '国药准字H20213152' AND merchant_id = 578 AND item_name = '托伐普坦片';
+selectGoodsInformation:
+  select approval_number from cn_uniondrug_union_finance.goods_information where approval_number = '国药准字H20213152' AND merchant_id = 578 AND item_name = '托伐普坦片';
+
+
+

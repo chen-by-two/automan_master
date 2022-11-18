@@ -1,0 +1,3 @@
+2022-10-21 22:20:49,799 - root - INFO - 请求ulr地址http://java.goodscenter.mng.turboradio.cn/spu/save
+2022-10-21 22:20:50,083 - root - INFO - 卡卡卡
+2022-10-21 22:20:50,083 - root - INFO - 返回结果{"errno":400,"error":"请求Body不可读","dataType":"ERROR","data":{},"success":false,"fail":true}

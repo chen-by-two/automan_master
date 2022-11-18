@@ -1,0 +1,222 @@
+# 测试环境 面额卡数据预置
+Authorization:
+  # 后台登录认证
+  Bearer b400892b-460b-4219-9b3f-aa8e616ad5f5
+
+jwt:
+#公众号登录的jwt
+  Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJtZW1iZXJJZCI6MTEwNzgyMCwid3hPcGVuaWQiOiJvZi1GWHczNHhtSWd4bzh3azVhOGE4dXpXamJjIiwidmVyc2lvbiI6eyJrZXkiOiJBVVRIX3dlY2hhdF8xMTA3ODIwIiwidmFsdWUiOiIxIn0sImluZm8iOnsibmFtZSI6Ilx1Njc0ZVx1N2Y4ZSIsIm1vYmlsZSI6IjE3MzY2MzUyMTcyIn0sImNoYW5uZWwiOnsib3BlbmlkIjoib2YtRlh3MzR4bUlneG84d2s1YThhOHV6V2piYyIsInR5cGUiOiJ3ZWNoYXQifX0.e-W2p_DOhZdKfD6b94UffIIpnjomYng4AAI3_gooLGHvFVsfGXuLuNAUhdSn3uEK_2wmOWM3eNon4ETMfCZqdbZjWDJPLYth17QVEVh7kowPAZg3iNhXGSRRdb_H9lOyUw1dX3q9rOAD2BOrmEu3Fo6W3PuKK82ogWazaL2EzrSvdVZGHcOWBK1n-uv1ruBqcTSKHdYewv-pIC4B6tuR6bDoRZEI_nOygn5ES5DnYWiesHqj371sCdCKoH8iY2j6XpSV9HPahRfzyPt_uRKicoTxm_BQo4xaLNNmICIKxP7ZpMUcSmUMDCKKlVzm583X8yUzb59gJGQq5zhG0BxcCw
+
+mobiles:
+  # 公众号登录账户-权益领取账户
+  17366352172
+cardNum:
+  341281199208154666
+cardName:
+  李美
+updateCaptchaAll:
+  # 初始化后台验证码
+  UPDATE `cn_uniondrug_module_data`.`captcha` SET `status` = 0 WHERE `mobile` = 17366352172;
+updateCaptchaCode:
+  # 设定后台登录验证码
+  UPDATE `cn_uniondrug_module_data`.`captcha` SET `status`= 1 , `gmtExpired` = '2120-09-23 10:04:52' WHERE id = 5637;
+
+projectId_1:
+  # 权益项目id
+  416005
+groupId_1:
+  # 权益分组ID、1是电子码领取方式权益分组
+  3552
+groupId_day:
+  # 权益分组,单日数量领取上线分组
+  3561
+groupId_day1:
+  # 权益分组,单日金额领取上线分组
+  3578
+groupId_day2:
+  # 权益分组,单月数量领取上限外分组
+  3579
+groupId_day3:
+  # 权益分组,单月数量领限制内分组
+  3580
+groupId_day4:
+  # 权益分组,单月金额领限制内分组
+  3581
+groupId_day5:
+  # 权益分组,单月金额领限制外分组
+  3582
+groupId_day6:
+  # 权益分组,单年数量限制内分组
+  3591
+groupId_day7:
+  # 权益分组,单年数量限制外分组
+  3592
+groupId_day8:
+  # 权益分组,单年金额限制内分组
+  3593
+groupId_day9:
+  # 权益分组,单年金额限制外分组
+  3594
+groupId_day10:
+  # 权益分组,终身数量限制内分组
+  3595
+groupId_day11:
+  # 权益分组,终身数量限制外分组
+  3596
+groupId_day12:
+  # 权益分组,终身金额限制内分组
+  3597
+groupId_day13:
+  # 权益分组,终身金额限制外分组
+  3598
+groupId_day19:
+  # 权益分组,单日金额优先到达限制分组
+  3599
+groupId_day20:
+  # 权益分组,单日数量优先到达限制分组
+  3600
+groupId_day21:
+  # 权益分组,单月金额优先到达限制分组
+  3601
+groupId_day22:
+  # 权益分组,单月数量优先到达限制分组
+  3602
+groupId_day23:
+  # 权益分组,单年金额优先到达限制分组
+  3603
+groupId_day24:
+  # 权益分组,单年数量优先到达限制分组
+  3604
+groupId_day25:
+  # 权益分组,终身金额优先到达限制分组
+  3606
+groupId_day26:
+  # 权益分组,终身数量优先到达限制分组
+  3607
+groupId_day27:
+  # 金额跟随项目
+  3608
+groupId_day28:
+  # 数量跟随项目
+  3609
+groupId_daycdkey20:
+  # 数量跟随项目
+  3663
+groupId_day28:
+  # 数量跟随项目
+  3609
+groupId_day29:
+  # 数量跟随项目
+  3621
+
+
+
+#手机号预分配
+groupId31:
+  # 数量跟随项目
+  3623
+groupId32:
+  # 数量跟随项目
+  3624
+groupId33:
+  # 数量跟随项目
+  3627
+groupId35:
+  # 数量跟随项目
+  3628
+groupId37:
+  # 数量跟随项目
+  3630
+groupId39:
+  # 数量跟随项目
+  3631
+groupId41:
+  # 数量跟随项目
+  3632
+groupId43:
+  # 数量跟随项目
+  3633
+groupId45:
+  # 数量跟随项目
+  3634
+
+groupId55:
+  # 数量跟随项目
+  3635
+
+groupId56:
+  # 数量跟随项目
+  3636
+
+
+
+  #雇主清单
+groupId57:
+  # 无限制
+  3650
+groupId59:
+  # 单日数量限制内
+  3652
+groupId60:
+  # 单日数量限制外
+  3653
+groupId61:
+  # 单日金额限制外
+  3655
+groupId63:
+  # 单日金额限制外
+  3656
+groupId65:
+  # 单日金额限制外
+  3657
+groupId67:
+  # 单日金额限制外
+  3658
+groupId69:
+  # 单日金额限制外
+  3659
+groupId71:
+  # 单日金额限制外
+  3660
+groupId73:
+  # 单日金额限制外
+  3661
+
+channel_1:
+  # 权益领取方式、1是电子码领取
+  "cdKey"
+channel_2:
+  # 权益领取方式、2是雇主清单的领取方式
+  "userInfo"
+channel_3:
+  # 权益领取方式、3是链接二维码领取方式
+  "qrCodeLink"
+channel_4:
+  # 权益领取方式、4是实体卡领取方式
+  "entityCard"
+channel_5:
+  # 权益领取方式、5是手机预分配领取方式
+  "phone"
+channel_6:
+  # 权益领取方式、6是驻店宝
+  "stagnation"
+envt:
+  # 域名
+  "turboradio.cn"
+successErrono:
+  # 权益激活成功断言
+  '0'
+repeatErrono:
+  # 权益重复提交断言
+  {'errno': '220053', 'error': '未发现您有可激活的权益，这可能是您之前已经激活过，或输入的信息有误，请检查后再次输入。', 'dataType': 'ERROR', 'data': {}}
+limitErrono:
+  #单日数量领取上限
+  {
+ "errno": "261105",
+ "error": "您激活的权益已达到限制，本次无法领取",
+ "dataType": "ERROR",
+ "data": {}
+}
+userInfoErrono:
+  #单日数量领取上限
+  {'errno': '261101', 'error': '未发现您有可激活的权益，这可能是您之前已经激活过，或输入的信息有误，请检查后再次输入。', 'dataType': 'ERROR', 'data': {}}

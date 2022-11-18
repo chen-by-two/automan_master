@@ -1,0 +1,98 @@
+# 测试环境 次卡数据预置
+updateLoginCaptchaAll:
+  # 初始化后台登录验证码
+  UPDATE `cn_uniondrug_module_data`.`captcha` SET `status` = 0 WHERE `mobile` = 13600852085;
+updateLoginCaptcha:
+  # 修改后台登录验证码
+  UPDATE `cn_uniondrug_module_data`.`captcha` SET `status`= 1 , `gmtExpired` = '2120-09-23 10:04:52' WHERE id = 5652;
+LoginCaptcha:
+  # 后台验证码-写死
+  848521
+LogintCaptchas:
+  # 公众号登录验证码-接口造验证码-写死
+  898890
+mobile:
+  # 后台登录账户
+  13600852085
+mobiles:
+  # 公众号登录账户-权益领取账户
+  18923323290
+projectId_1:
+  # 权益项目ID
+  416050
+groupId_1:
+  # 使用权益分组id - 前期写死权益项目分组、不运行一次就生成一次、这个是非合并次卡分组、电子码领取方式
+  3107
+groupId_2:
+  # 使用权益分组id - 前期写死权益项目分组、不运行一次就生成一次、这个是非合并次卡分组、雇主清单领取方式
+  3108
+groupId_3:
+  # 使用权益分组id - 前期写死权益项目分组、不运行一次就生成一次、这个是非合并次卡分组、链接二维码一码一权益领取方式
+  3109
+groupId_4:
+  # 使用权益分组id - 前期写死权益项目分组、不运行一次就生成一次、这个是非合并次卡分组、链接二维码通用码领取方式
+  3110
+groupId_5:
+  # 使用权益分组id - 前期写死权益项目分组、不运行一次就生成一次、这个是非合并次卡分组、实体卡领取方式
+  3111
+groupId_6:
+  # 使用权益分组id - 前期写死权益项目分组、不运行一次就生成一次、这个是非合并次卡分组、手机预分配领取方式
+  3114
+groupId_7:
+  # 使用权益分组id - 前期写死权益项目分组、不运行一次就生成一次、这个是非合并次卡分组、驻店宝指的手机号领取方式
+  3112
+groupId_8:
+  # 使用权益分组id - 前期写死权益项目分组、不运行一次就生成一次、这个是非合并次卡分组、驻店宝默认链接二维码领取方式
+  3113
+channel_1:
+  # 权益领取方式、1是电子码领取
+  "cdKey"
+channel_2:
+  # 权益领取方式、2是雇主清单
+  "userInfo"
+channel_3:
+  # 权益领取方式、3是链接二维码
+  "qrCodeLink"
+channel_4:
+  # 权益领取方式、4是实体卡
+  "entityCard"
+channel_5:
+  # 权益领取方式、5是手机预分配
+  "phone"
+channel_6:
+  # 权益领取方式、6是驻店宝
+  "stagnation"
+envt:
+  # 域名
+  "turboradio.cn"
+
+RightsActivation:
+  # 权益激活成功断言
+  '0'
+
+RepeatedSubmissionOfRights:
+  # 权益重复提交断言
+  {'errno': '220053', 'error': '未发现您有可激活的权益，这可能是您之前已经激活过，或输入的信息有误，请检查后再次输入。', 'dataType': 'ERROR', 'data': {}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

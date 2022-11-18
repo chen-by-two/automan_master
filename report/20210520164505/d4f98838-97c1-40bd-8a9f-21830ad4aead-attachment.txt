@@ -1,0 +1,5 @@
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "0000"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"306","account":"18099990000","member_id":"15961232","full_name":"\u5f20\u5927\u4ed9","created_at":"2020-03-11 01:09:59","updated_at":"2021-05-20 16:46:26","last_login_at":"2021-05-20 16:46:27","head_img":"","role":"\u52a9\u624b\u5185\u90e8\u4e13\u7528","role_id":"0","v4_role_id":"ZS1048","token":"cca43685-8df9-44cb-be8e-c31fb8244e8a"}}
+INFO     root:assistantappApi.py:22 /user/logindone	账号登录
+INFO     root:CommonKeyWord.py:70 token：cca43685-8df9-44cb-be8e-c31fb8244e8a
+INFO     root:CommonKeyWord.py:70 inspectldsql：select * from uniondrug_data_service.inspect_records where organizationStoreId = 4338 order by Id desc LIMIT 1

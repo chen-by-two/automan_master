@@ -1,0 +1,6 @@
+sql1:
+  select * from `order` limit 1;
+sql2:
+  select * from cancel limit 0,10;
+sql3:
+  update `order` set channel = 1 where mainOrderNo = '80070207158761675196';

@@ -1,0 +1,30 @@
+env:
+  turboradio.cn
+
+startDate:
+  "2022-04-07"
+
+endDate:
+  "2022-04-20"
+
+latitude:
+  2
+
+policyIds:
+- 5730
+
+projectId:
+  "576"
+
+
+policyNo:
+  "uccyrv"
+
+billNo:
+  "BN202112231635322870799588076054"
+
+insurerId:
+  240371
+
+policyNo1:
+  531312214400000000900

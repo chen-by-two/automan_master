@@ -1,0 +1,205 @@
+# 更新助手商户中心商户基础信息数据
+delete_ob:
+  DROP TABLE IF EXISTS `uniondrug_data_service`.`organize_base`;
+
+create_ob:
+  CREATE TABLE `uniondrug_data_service`.`organize_base` LIKE `cn_uniondrug_module_merchant`.`organize_base`;
+
+insert_ob:
+  INSERT INTO `uniondrug_data_service`.`organize_base` SELECT * FROM `cn_uniondrug_module_merchant`.`organize_base`;
+
+# 更新助手商户中心商户更多信息数据
+delete_oi:
+  DROP TABLE IF EXISTS `uniondrug_data_service`.`organization_information`;
+
+create_oi:
+  CREATE TABLE `uniondrug_data_service`.`organization_information` LIKE `cn_uniondrug_module_merchant`.`organization_information`;
+
+insert_oi:
+  INSERT INTO `uniondrug_data_service`.`organization_information` SELECT * FROM `cn_uniondrug_module_merchant`.`organization_information`;
+
+# 更新助手药店宝店员表数据
+delete_as:
+  DROP TABLE IF EXISTS `uniondrug_data_service`.`assistant`;
+
+create_as:
+  CREATE TABLE `uniondrug_data_service`.`assistant` LIKE `cn_uniondrug_module_clerk`.`assistant`;
+
+insert_as:
+  INSERT INTO `uniondrug_data_service`.`assistant` SELECT * FROM `cn_uniondrug_module_clerk`.`assistant`;
+
+
+getLoginCaptcha:
+  #查询药联后台手机登录验证码
+  SELECT captcha FROM `cn_uniondrug_module_data`.`captcha` where mobile = 18099990000 ORDER BY id desc LIMIT 1;
+getAssistantCaptcha:
+  #查询添加店员验证码
+  SELECT captcha FROM `cn_uniondrug_module_data`.`captcha` where mobile = 15122222223 ORDER BY id desc LIMIT 1;
+mobileAssistant:
+  18099990000
+userId:
+  306
+password:
+  '0000'
+env:
+  turboradio.cn
+getCustomer:
+  #查询药联助手客户
+  SELECT `captcha` FROM `uniondrug_data_service`.`v3_customer` WHERE mobile = "18099990000" ORDER BY gmtCreated DESC LIMIT 1;
+updateCustomersql:
+  #更新助手客户状态
+  update `uniondrug_data_service`.`v3_customer` set customerStatus = 0 where customerId = 7159;
+updateCustomerTimesql:
+  #更新助手客户拜访到达时间
+  UPDATE uniondrug_data_service.v3_visit set arrivalTime='1608281860' WHERE  visitId='1331';
+updateDepartureTimesql:
+  #更新助手客户拜访离开时间
+  UPDATE uniondrug_data_service.v3_visit set departureTime='0' WHERE  visitId = '1331'
+updateInspectTimesql:
+  #更新助手巡店开始时间
+  UPDATE uniondrug_data_service.inspect_records set startTime = '2020-12-18 16:57:48' where user_id = 306 order by id desc LIMIT 1
+deleteCustomersql:
+  #删除助手客户信息
+  DELETE FROM `uniondrug_data_service`.`v3_customer` WHERE `userId` = '306' ORDER BY `customerId` DESC LIMIT 1;
+deleteCommonVisitsql:
+  #删除常规拜访信息
+  DELETE FROM `uniondrug_data_service`.`v3_visit` WHERE `userId` = '306' and customerId = '7159' and visitType = 1 ORDER BY `visitId` DESC LIMIT 1;
+deletelnterimVisitsql:
+  #删除临时拜访信息
+  DELETE FROM `uniondrug_data_service`.`v3_visit` WHERE `userId` = '306' and customerId = '7159' and visitType = 2 ORDER BY `visitId` DESC LIMIT 1;
+deleteAssistantsql:
+  #删除店员sql
+  DELETE from cn_uniondrug_module_clerk.assistant where account = 15122222223;
+CustomerPagingAssert:
+  #客户列表断言
+  '0'
+
+#获取客户名称
+GetCustomerInfo:
+  select customerName from uniondrug_data_service.v3_customer where type='1' and customerStatus = 4 order by gmtUpdated desc limit 1
+
+#断言客户名称
+CustomerNameAssert:
+  "自动化熄灯大药房"
+
+#删除添加的连锁
+DeleteCustomersql:
+  DELETE from uniondrug_data_service.v3_customer where customerName = "自动化熄灯大药房"
+
+CustomerInfoAssert:
+  #客户详情断言
+  [{'contactId': '615', 'customerId': '7159', 'userId': '306', 'contactName': '张大仙', 'sex': '0', 'sexText': '女', 'mobile': '15233331112', 'phone': '', 'department': '', 'position': '测测测', 'address': '', 'houseNumber': '', 'longitude': '0.000000', 'latitude': '0.000000', 'weixinUrl': '', 'remark': '', 'gmtCreated': '2020-11-06 15:27:43', 'gmtUpdated': '2020-11-06 15:27:43'}]
+CustomerAddAssert:
+  #新增客户断言
+  '0'
+CustomerEditAssert:
+  #编辑客户断言
+  '0'
+CustomerDeleteAssert:
+  #删除客户断言
+  '0'
+Errno:
+  #断言返回码
+  '0'
+InspectStartAssert:
+  #距离过远断言返回码
+  '289045'
+AsertStoreId:
+  #门店详情断言门店id
+  '125756'
+
+# 更新大数据门店表用户信息
+UpdateStoreInfo:
+  UPDATE `cn_uniondrug_data_dm`.`store_operation_info_ed` SET `om_user_id` = 306 WHERE `om_user_id` = 7 and status in (0,1) AND merchant_id in (613,635);
+
+# 更新大数据门店表日期为昨天
+UpdateStoreDate:
+  UPDATE `cn_uniondrug_data_dm`.`store_operation_info_ed` SET `statis_date` = '2021-05-12' WHERE `om_user_id` = 306;
+
+# 更新大数据执行日期表门店任务日期为今天
+UpdateSyncDate:
+  UPDATE `cn_uniondrug_data_dm`.`user_table_sync_date` SET `last_sync_date` = '2021-05-13 10:28:29' WHERE `table_name` = "store_operation_info_ed";
+
+# 更新大数据门店表用户信息
+UpdateStoreInfo1:
+  UPDATE `cn_uniondrug_data_dm`.`store_operation_info_ed` SET `om_user_id` = 7 WHERE `om_user_id` = 306;
+
+
+# 删除任务数据
+DeleteWork:
+  DELETE FROM `cn_uniondrug_module_assistant`.`work_list` WHERE `id` in  (66666,77777,88888,99999)
+DeleteWork_record:
+  DELETE FROM `cn_uniondrug_module_assistant`.`work_record` WHERE `workId` IN (66666,77777,88888,99999)
+#插入任务数据
+INSERTWork1:
+  INSERT INTO `cn_uniondrug_module_assistant`.`work_list`(`id`, `userId`, `inDate`, `storeId`, `storeName`, `chainId`, `chainName`, `type`, `sort`, `status`, `relatedId`, `distributeId`, `workFlag`, `ownFlag`, `times`, `storeStatus`, `applyId`, `visitChainType`, `communicateType`, `remark`, `longitude`, `latitude`, `gmtCreated`, `gmtUpdated`) VALUES (88888, 306, 20210518, 4338, '田林东路店', 613, '上海太安堂', 14, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, '', NULL, NULL, '2021-05-18 10:56:51', '2021-05-18 10:56:51');
+INSERTWork2:
+  INSERT INTO `cn_uniondrug_module_assistant`.`work_list`(`id`, `userId`, `inDate`, `storeId`, `storeName`, `chainId`, `chainName`, `type`, `sort`, `status`, `relatedId`, `times`, `storeStatus`, `applyId`, `visitChainType`, `communicateType`, `remark`, `longitude`, `latitude`, `distributeId`, `workFlag`, `ownFlag`, `gmtCreated`, `gmtUpdated`) VALUES (99999, 306, 20210518, 160846, '东宝兴路店', 791, '上海海王星辰', 1, 2, 0, 0, 1, 1, 0, 0, 0, '', 0.000000, 0.000000, 0, 1, 0, '2021-05-18 10:23:27', '2021-05-18 10:23:27');
+INSERTWork3:
+  INSERT INTO `cn_uniondrug_module_assistant`.`work_list`(`id`, `userId`, `inDate`, `storeId`, `storeName`, `chainId`, `chainName`, `type`, `sort`, `status`, `relatedId`, `distributeId`, `workFlag`, `ownFlag`, `times`, `storeStatus`, `applyId`, `visitChainType`, `communicateType`, `remark`, `longitude`, `latitude`, `gmtCreated`, `gmtUpdated`) VALUES (77777, 306, 20210518, 8405, '第098连锁药店', 674, '青岛春天之星', 2, 5, 0, 0, 0, 1, 0, 2, 1, 0, 0, 0, '', NULL, NULL, '2021-05-18 09:46:32', '2021-05-18 09:46:59')
+INSERTWork4:
+  INSERT INTO `cn_uniondrug_module_assistant`.`work_list`(`id`, `userId`, `inDate`, `storeId`, `storeName`, `chainId`, `chainName`, `type`, `sort`, `status`, `relatedId`, `distributeId`, `workFlag`, `ownFlag`, `times`, `storeStatus`, `applyId`, `visitChainType`, `communicateType`, `remark`, `longitude`, `latitude`, `gmtCreated`, `gmtUpdated`) VALUES (66666, 306, 20210518, 8356, '第078连锁药店', 674, '青岛春天之星', 14, 1, 0, 0, 0, 1, 0, 1, 1, 0, 0, 0, '', NULL, NULL, '2021-05-18 09:46:31', '2021-05-18 09:48:03')
+# 查询取消任务id
+GetCanceld:
+  SELECT id FROM `cn_uniondrug_module_assistant`.`work_list` WHERE `storeId` = '160846' AND `userId` = '306' AND `inDate` = '20210518';
+
+# 查询取消任务status
+GetCancestatus:
+ SELECT status FROM `cn_uniondrug_module_assistant`.`work_list` WHERE id = 99999;
+Cancestatus:
+  2
+
+# 查询领取任务status
+GetAcceptstatus:
+ SELECT status FROM `cn_uniondrug_module_assistant`.`work_list` WHERE id = 88888;
+Acceptstatus:
+  3
+
+# 查询开始任务status
+GetStartstatus:
+ SELECT status FROM `cn_uniondrug_module_assistant`.`work_list` WHERE id = 88888;
+Startstatus:
+  4
+
+# 查询完成线下任务status
+InspectUpdatestatus:
+  SELECT status FROM `cn_uniondrug_module_assistant`.`work_list` WHERE id = 88888;
+Inspectstatus:
+  1
+
+# 查询完成电话任务status
+Getvideotatus:
+ SELECT status FROM `cn_uniondrug_module_assistant`.`work_list` WHERE id = 66666;
+videostatus:
+  1
+
+# 查询完成微信任务status
+Gettextstatus:
+ SELECT status FROM `cn_uniondrug_module_assistant`.`work_list` WHERE id = 77777;
+textstatus:
+  1
+
+# 查询领取任务id
+Getdrawld:
+  SELECT id FROM `cn_uniondrug_module_assistant`.`work_list` WHERE `storeId` = '4338' AND `userId` = '306' AND `inDate` = '20210518';
+
+# 查询开始任务id
+GetStartld:
+  SELECT id FROM `cn_uniondrug_module_assistant`.`work_list` WHERE `storeId` = '4338' AND `userId` = '306' AND `inDate` = '20210518';
+
+# 查询完成线下任务id
+Getinspectld:
+  select * from uniondrug_data_service.inspect_records where organizationStoreId = 4338 order by Id desc LIMIT 1
+
+#查询连锁拜访申请
+GetApproveVissit:
+  select applyName from cn_ud_mod_approval.wf_apply order by applyId desc limit 1
+
+#连锁拜访断言
+ApproveVissitAsert:
+  "连锁拜访"
+
+#查询药店宝店员token
+GetDrugToken:
+  SELECT * FROM `cn_uniondrug_backend_app`.`token` WHERE assistantid = 200895 AND STATUS = 1 ORDER BY id desc LIMIT 1
+

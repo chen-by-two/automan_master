@@ -1,0 +1,16 @@
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "0000"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"306","account":"18099990000","member_id":"15961232","full_name":"\u5f20\u5927\u4ed9","created_at":"2020-03-11 01:09:59","updated_at":"2021-05-21 10:27:52","last_login_at":"2021-05-21 10:27:52","head_img":"","role":"\u52a9\u624b\u5185\u90e8\u4e13\u7528","role_id":"0","v4_role_id":"ZS1048","token":"55621840-34b6-4b90-9306-09592f666fc9"}}
+INFO     root:assistantappApi.py:22 /user/logindone	账号登录
+INFO     root:CommonKeyWord.py:70 token：55621840-34b6-4b90-9306-09592f666fc9
+INFO     root:HttpTools.py:56 {"workId": "66666"}
+INFO     root:HttpHandler.py:41 {"errno":"280002","error":"\u4efb\u52a1\u5df2\u7ecf\u9886\u53d6\u8fc7\u4e86,\u8bf7\u5237\u65b0\u4efb\u52a1\u5217\u8868\u91cd\u8bd5","dataType":"ERROR","data":{}}
+INFO     root:assistantappApi.py:1502 /work/accept	done	领取门店任务
+INFO     root:HttpTools.py:56 {"appealInfo": {}, "appealReason": 3, "communicateType": 2, "workId": "66666"}
+INFO     root:HttpHandler.py:41 {"errno":"280001","error":"\u64cd\u4f5c\u5931\u8d25,\u8bf7\u5237\u65b0\u4efb\u52a1\u5217\u8868\u91cd\u8bd5","dataType":"ERROR","data":{}}
+INFO     root:assistantappApi.py:1534 /workRecord/create	done	完成线上门店任务
+INFO     root:CommonKeyWord.py:70 WorkRecordStarterrno:280001
+INFO     root:HttpTools.py:56 {"communicateImages": ["http://uniondrug-release.oss-cn-shanghai.aliyuncs.com/backend.assistant/qalrl3lteu3ngf7hoks22qqvc6.jpg"], "communicateType": 2, "remark": "\u7ebf\u4e0a\u62dc\u8bbf\u81ea\u52a8\u5316\u6d4b\u8bd5\u7ed3\u675f", "summary": ["5", "6"], "workId": "66666"}
+INFO     root:HttpHandler.py:41 {"errno":"280001","error":"\u64cd\u4f5c\u5931\u8d25,\u8bf7\u5237\u65b0\u4efb\u52a1\u5217\u8868\u91cd\u8bd5","dataType":"ERROR","data":{}}
+INFO     root:assistantappApi.py:1534 /workRecord/create	done	完成线上门店任务
+INFO     root:CommonKeyWord.py:70 WorkRecordCreateerrno:280001
+INFO     root:CommonKeyWord.py:70 完成门店电话语音任务断言结果：0

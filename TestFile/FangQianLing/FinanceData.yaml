@@ -1,0 +1,97 @@
+# 接口请求后的状态码
+statusCode:
+  0
+# 组织ID
+organizationId:
+  578
+# 核算单位ID
+unitId:
+  578
+#财务负责人Id
+directorId:
+  395
+#连锁待办事项，入参unitId
+todoUnitId:
+    88764
+#yaml执行环境
+envt:
+  'uniondrug.net'
+#保司ID
+insurerId:
+  5
+#根据保司ID获取保司信息
+selectInsurerById:
+  'select organizationId, name, businessType from`cn_uds_fin_com`.`insurer` where organizationId=5 '
+# TC0002：根据组织ID查询merchant_settings
+selectMerchantSettings:
+ 'select invoiceRules, planPayDays, insureType, directClaim, invoiceClaimStatus, reportClaimStatus, paymentNode, autoCreateHx, autoCreateHxBill from `cn_uds_fin_com`.`merchant_settings` where organizationId=578'
+# 根据组织ID查询merchant_extend商户扩展信息
+selectMerchantExtend:
+  'SELECT organizationId, leaderNo, leaderName, unifiedSocialCreditCode FROM `cn_uds_fin_com`.`merchant_extend` where organizationId=578'
+# TC0003：根核算单位ID查询票据信息
+selectBillInfo:
+  'select taxpayerIdNumber from `cn_uds_fin_com`.`bill_info` where unitId=578'
+# 在线开票核算单位Id
+onlineInvoiceUnitId:
+  90026
+# TC0005：根核算单位ID查询在线开票配置
+selectApplyVip:
+   'SELECT av.unitName, av.`status`, bi.onlineInvoice FROM `cn_uds_fin_com`.`apply_vip` av
+    left join `cn_uds_fin_com`.`bill_info` bi on av.unitId=bi.unitId
+    where av.unitId=90026 order by av.id desc limit 1'
+# TC0006：根核算单位ID查询待办事项
+selectPartnerTodoList:
+  'SELECT documentNo, unitId, `status`, operatorId,operatorName FROM `cn_uds_fin_com`.`partner_todo_list` WHERE `status`=0 and unitId=88764'
+# TC0008：最新版本信息
+selectVersionControl:
+  'select `id`, `version`, `copyRight`, `officeSite`, `phone`, `address` from cn_uds_fin_com.business_center_version order by id desc limit 1'
+# 用例0011
+testMemberId:
+  15961530
+rcMemberId:
+  6422110
+
+#TC0012
+selectValidRenewal:
+  'SELECT
+	organizationId,
+	ugSubsidy,
+	partnerSubsidy,
+	`status`,
+	startTime, finishTime 
+	FROM `cn_uds_fin_com`.`merchant_renewal` 
+	WHERE `organizationId` = 578 and `status`=1 and (CURRENT_DATE between startTime and finishTime)'
+
+selectRenewalCount:
+  'SELECT
+  count(*) as renewal_count
+  FROM `cn_uds_fin_com`.`merchant_renewal`
+  WHERE `organizationId` = 578'
+
+# TC0013
+productName:
+  "麝香壮骨膏"
+approvalNumber:
+  "国药准字Z20063568"
+skuNo:
+  "134164-G013697"
+selectTaxClassificationbyApproveNumber:
+  'SELECT productName,specName, approvalNumber, taxEncode, taxClass, taxRate FROM `cn_uds_fin_com`.`tax_classification_encode` where approvalNumber="国药准字Z20063568"'
+selectTaxClassificationbyProductName:
+  'SELECT * FROM `cn_uds_fin_com`.`tax_classification_encode` productName like "%麝香壮骨膏%"'
+
+# TC0014
+notExistMemberId:
+  999999999
+selectWorkerByMemberId:
+  'select * from `cn_uds_fin_com`.`worker` where memberId=6422110'
+selectCompany:
+  'select * from `cn_uds_fin_com`.`company`'
+selectWorkerManByMemberId:
+    'select * from `cn_uds_fin_com`.`worker_man` where memberId=6422110'
+
+
+
+
+
+

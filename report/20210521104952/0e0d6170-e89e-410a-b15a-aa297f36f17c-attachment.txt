@@ -1,0 +1,9 @@
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "0000"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"306","account":"18099990000","member_id":"15961232","full_name":"\u5f20\u5927\u4ed9","created_at":"2020-03-11 01:09:59","updated_at":"2021-05-21 10:50:47","last_login_at":"2021-05-21 10:50:51","head_img":"","role":"\u52a9\u624b\u5185\u90e8\u4e13\u7528","role_id":"0","v4_role_id":"ZS1048","token":"1c19e04a-539e-4a09-a7a0-cefca13ed7b2"}}
+INFO     root:assistantappApi.py:22 /user/logindone	账号登录
+INFO     root:CommonKeyWord.py:70 token：1c19e04a-539e-4a09-a7a0-cefca13ed7b2
+INFO     root:HttpTools.py:56 {"id": "200268"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"200268","account":"15899663122","jobNumber":"12347","status":"1","statusText":"\u6b63\u5e38","short_account":"158****3122","full_name":"\u9999\u99992","partner_id":"0","store_id":"0","store_name":"\u6052\u5347\u5206\u5e97","partner_name":"\u5409\u6797\u4fe1\u5eb7","head_img":"","shopkeeper":{"account":"158****3122","full_name":"\u9999\u99992"},"role":"\u5e97\u957f","app_version":"","remark":""}}
+INFO     root:assistantappApi.py:1363 /assistant/detaildone	店员管理详情
+INFO     root:CommonKeyWord.py:70 AssistantDetailerrno:0
+INFO     root:CommonKeyWord.py:70 编辑门店信息断言结果：0

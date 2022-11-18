@@ -1,0 +1,9 @@
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "0000"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"306","account":"18099990000","member_id":"15961232","full_name":"\u5f20\u5927\u4ed9","created_at":"2020-03-11 01:09:59","updated_at":"2021-05-20 10:27:00","last_login_at":"2021-05-20 10:27:02","head_img":"","role":"\u52a9\u624b\u5185\u90e8\u4e13\u7528","role_id":"0","v4_role_id":"ZS1048","token":"b9965e4e-79d6-412e-9e7a-03850377a2e4"}}
+INFO     root:assistantappApi.py:22 /user/logindone	账号登录
+INFO     root:CommonKeyWord.py:70 token：b9965e4e-79d6-412e-9e7a-03850377a2e4
+INFO     root:HttpTools.py:56 {"role": 1, "account": "15899663122"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"200268","memberId":"15964376","account":"15899663122","mobile":"","fullName":"","role":"1","partnerId":"0","storeId":"0","status":"1"}}
+INFO     root:assistantappApi.py:1411 /assistant/updatedone	店员管理调岗/编辑工号
+INFO     root:CommonKeyWord.py:70 AssistantUpdateerrno:0
+INFO     root:CommonKeyWord.py:70 编辑门店信息断言结果：0

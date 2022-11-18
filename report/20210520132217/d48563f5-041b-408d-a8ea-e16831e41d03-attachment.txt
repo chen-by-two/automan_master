@@ -1,0 +1,9 @@
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "0000"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"306","account":"18099990000","member_id":"15961232","full_name":"\u5f20\u5927\u4ed9","created_at":"2020-03-11 01:09:59","updated_at":"2021-05-20 13:22:52","last_login_at":"2021-05-20 13:22:59","head_img":"","role":"\u52a9\u624b\u5185\u90e8\u4e13\u7528","role_id":"0","v4_role_id":"ZS1048","token":"1a31328d-cce7-415d-b117-fb01510117cb"}}
+INFO     root:assistantappApi.py:22 /user/logindone	账号登录
+INFO     root:CommonKeyWord.py:70 token：1a31328d-cce7-415d-b117-fb01510117cb
+INFO     root:HttpTools.py:56 {"storeId": "125756"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"partnerId":"125610","partnerName":"\u5409\u6797\u4fe1\u5eb7","storeId":"125756","storeName":"\u91d1\u95e8\u5206\u5e97","shortName":"\u91d1\u95e8\u5206\u5e97","internalCode":"2037","status":"1","statusText":"\u6b63\u5e38","address":"\u5b64\u5bb6\u5b50\u9547\u897f\u6587\u660e\u8857\u56db\u59d41\u680b80-1\u623f1-2\u5c42","subAddress":"\u6d4b\u6d4b\u6d4b\u6d4b\u6d4b\u7f16\u8f91","mapLon":"124.242450","mapLat":"43.665540","businessStartTime":"06:30","businessEndTime":"21:00","storePhone":"0434-5577657","image":"","tags":[],"materielCount":"0","inspectCount":"0","lastInspectedAt":"\u6682\u65e0\u6570\u636e","isAllDay":false,"isDirect":false,"assistantCount":"2","mapLevel":"","addrReadOnly":"0"}}
+INFO     root:assistantappApi.py:1216 /merchant/storeDetaildone	门店管理详情
+INFO     root:CommonKeyWord.py:70 MerchantStoreDetailstoreId:125756
+INFO     root:CommonKeyWord.py:70 门店管理详情断言结果：125756

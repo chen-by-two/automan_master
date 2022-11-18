@@ -1,0 +1,73 @@
+# 测试环境 面额卡数据预置
+mobile:
+  # 后台登录账户
+  13600852085
+mobiles:
+  # 公众号登录账户-权益领取账户
+  13714565209
+updateCaptchaAll:
+  # 初始化后台验证码
+  UPDATE `cn_uniondrug_module_data`.`captcha` SET `status` = 0 WHERE `mobile` = 13600852085;
+updateCaptchaCode:
+  # 设定后台登录验证码
+  UPDATE `cn_uniondrug_module_data`.`captcha` SET `status`= 1 , `gmtExpired` = '2120-09-23 10:04:52' WHERE id = 5652;
+LoginCaptcha:
+  # 后台验证码-写死
+  848521
+LogintCaptchas:
+  # 公众号登录验证码-接口造验证码-写死
+  898890
+projectId_1:
+  # 权益项目id
+  416047
+groupId_1:
+  # 权益分组ID、1是电子码领取方式权益分组
+  3088
+groupId_2:
+  # 权益分组ID、2是雇主清单的领取方式权益分组
+  3089
+groupId_3:
+  # 权益分组ID、3是链接二维码一码一权益领取方式权益分组
+  3090
+groupId_4:
+  # 权益分组ID、4是链接二维码通用码领取方式权益分组
+  3091
+groupId_5:
+  # 权益分组ID、5是实体卡领取方式权益分组
+  3092
+groupId_6:
+  # 权益分组ID、6是手机预分配领取方式权益分组
+  3094
+groupId_7:
+  # 权益分组ID、7是驻店宝指定手机号领取方式权益分组
+  3093
+groupId_8:
+  # 权益分组ID、8是驻店宝链接二维码领取方式权益分组
+  3105
+channel_1:
+  # 权益领取方式、1是电子码领取
+  "cdKey"
+channel_2:
+  # 权益领取方式、2是雇主清单的领取方式
+  "userInfo"
+channel_3:
+  # 权益领取方式、3是链接二维码领取方式
+  "qrCodeLink"
+channel_4:
+  # 权益领取方式、4是实体卡领取方式
+  "entityCard"
+channel_5:
+  # 权益领取方式、5是手机预分配领取方式
+  "phone"
+channel_6:
+  # 权益领取方式、6是驻店宝
+  "stagnation"
+envt:
+  # 域名
+  "turboradio.cn"
+RightsActivation:
+  # 权益激活成功断言
+  '0'
+RepeatedSubmissionOfRights:
+  # 权益重复提交断言
+  {'errno': '220053', 'error': '未发现您有可激活的权益，这可能是您之前已经激活过，或输入的信息有误，请检查后再次输入。', 'dataType': 'ERROR', 'data': {}}

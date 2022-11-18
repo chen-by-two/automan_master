@@ -1,0 +1,9 @@
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "0000"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"306","account":"18099990000","member_id":"15961232","full_name":"\u5f20\u5927\u4ed9","created_at":"2020-03-11 01:09:59","updated_at":"2021-05-20 15:53:07","last_login_at":"2021-05-20 15:53:10","head_img":"","role":"\u52a9\u624b\u5185\u90e8\u4e13\u7528","role_id":"0","v4_role_id":"ZS1048","token":"3c331341-9a16-42af-a1c6-c81ba2188aa9"}}
+INFO     root:assistantappApi.py:22 /user/logindone	账号登录
+INFO     root:CommonKeyWord.py:70 token：3c331341-9a16-42af-a1c6-c81ba2188aa9
+INFO     root:HttpTools.py:56 {"businessStartTime": "06:30", "image": "", "isAllDay": "false", "subAddress": "\u6d4b\u6d4b\u6d4b\u6d4b\u6d4b\u81ea\u52a8\u5316\u95e8\u5e97\u7f16\u8f91", "address": "\u95e8\u5e97\u7f16\u8f91\u81ea\u52a8\u5316\u6d4b\u8bd5", "mapLon": "124.242450", "storePhone": "0434-5577657", "mapLat": "43.665540", "shortName": "\u949f\u843d\u6f6d\u5206\u5e97", "businessEndTime": "21:00", "storeId": "106017", "isDirect": "false"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"storeId":"106017","mapLon":"124.242450","mapLat":"43.665540","address":"\u95e8\u5e97\u7f16\u8f91\u81ea\u52a8\u5316\u6d4b\u8bd5","image":"","isDirect":"0","businessStartTime":"06:30","businessEndTime":"21:00","storePhone":"0434-5577657","isAllDay":false,"isPop":"0","popText":""}}
+INFO     root:assistantappApi.py:1022 /merchant/storeUpdatedone	修改门店地址信息
+INFO     root:CommonKeyWord.py:70 StoreUpdateerrno:0
+INFO     root:CommonKeyWord.py:70 编辑门店信息断言结果：0

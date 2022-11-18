@@ -1,0 +1,3 @@
+INFO     root:HttpTools.py:56 {"goodsBarCode": "6953395504766", "cardId": "5db5cba76b274aeeb54d", "memberId": 228}
+INFO     root:HttpHandler.py:41 {"errno":0,"error":"","dataType":"OBJECT","data":{"available":1,"isMemberPrice":"2"},"success":true,"fail":false}
+INFO     root:promoteCenterApi.py:350 /info/checkGoods	done	检查商品是否可以在此优惠权益内可用

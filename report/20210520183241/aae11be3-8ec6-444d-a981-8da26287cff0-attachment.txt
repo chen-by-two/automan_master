@@ -1,0 +1,9 @@
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "0000"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"306","account":"18099990000","member_id":"15961232","full_name":"\u5f20\u5927\u4ed9","created_at":"2020-03-11 01:09:59","updated_at":"2021-05-20 18:33:34","last_login_at":"2021-05-20 18:33:34","head_img":"","role":"\u52a9\u624b\u5185\u90e8\u4e13\u7528","role_id":"0","v4_role_id":"ZS1048","token":"dccb0d8b-69b6-4bab-8e29-af23bc5c9fd8"}}
+INFO     root:assistantappApi.py:22 /user/logindone	账号登录
+INFO     root:CommonKeyWord.py:70 token：dccb0d8b-69b6-4bab-8e29-af23bc5c9fd8
+INFO     root:HttpTools.py:56 {"mapLon": "118.779322", "storeId": "4338", "workId": "88888", "mapLat": "31.971852", "remark": "\u81ea\u52a8\u5316\u5f00\u59cb\u95e8\u5e97\u4efb\u52a1"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"50969","userName":"","storeId":"0","storeName":"","storeFullName":"","partnerName":"","businessStartTime":"","businessEndTime":"","storeLogo":"","storePhone":"","storeAddress":"","storeSubAddress":"","remark":"\u81ea\u52a8\u5316\u5f00\u59cb\u95e8\u5e97\u4efb\u52a1","address":"","mapLat":"","mapLon":"","startLat":"","startLon":"","status":"1","createdAt":"","startTime":"2021-05-20 18:33:34","endTime":"","inspectTime":"","organizationStoreId":"4338","images":[],"thumbs":[],"trains":[]}}
+INFO     root:assistantappApi.py:988 /inspect/startdone	新建巡店
+INFO     root:CommonKeyWord.py:70 WInspectStarterrno:0
+INFO     root:CommonKeyWord.py:70 开始门店任务断言结果：0

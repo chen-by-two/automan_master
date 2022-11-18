@@ -1,0 +1,72 @@
+-
+  #首页楼层列表
+  key: APP
+  url: /drugstoreuser/resource/bannerList
+  method: post
+  data:
+  Assert:
+    errno: '0'
+
+-
+  #金刚区列表
+  key: APP
+  url: /drugstoreuser/resource/serviceList
+  method: post
+  data:
+    partnerOrganId: 635
+  Assert:
+    errno: '0'
+
+-
+  #特权
+  key: APP
+  url: /drugstoreuser/privilege/list
+  method: post
+  data:
+    assistantId: 20083717
+    status: 2
+  Assert:
+    errno: '0'
+
+
+-
+  #会员页详情
+  key: APP
+  url: /drugstoreuser/ci/member/advisor/detail
+  method: post
+  data:
+    memberIds: 123
+  Assert:
+    errno: '0'
+
+
+-
+  #会员列表
+  key: APP
+  url: /drugstoreuser/ci/member/chat/list
+  method: post
+  data:
+    memberId: 111
+  Assert:
+    errno: '0'
+
+-
+  #会员开始聊天
+  key: APP
+  url: /drugstoreuser/ci/member/start/chat
+  method: post
+  data:
+    customerMemberId: 16236626
+    isYdbProgram: 1
+  Assert:
+    errno: '0'
+
+-
+  #合作人授权
+  key: APP
+  url: /v4/partner/auth
+  method: post
+  data:
+    isOpenPush: 1
+  Assert:
+    errno: '0'

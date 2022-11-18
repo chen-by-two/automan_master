@@ -1,0 +1,9 @@
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "0000"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"306","account":"18099990000","member_id":"15961232","full_name":"\u5f20\u5927\u4ed9","created_at":"2020-03-11 01:09:59","updated_at":"2021-05-21 14:06:39","last_login_at":"2021-05-21 14:06:43","head_img":"","role":"\u52a9\u624b\u5185\u90e8\u4e13\u7528","role_id":"0","v4_role_id":"ZS1048","token":"ecb1a43d-dc31-40c2-86d1-3d27c6406738"}}
+INFO     root:assistantappApi.py:22 /user/logindone	账号登录
+INFO     root:CommonKeyWord.py:70 token：ecb1a43d-dc31-40c2-86d1-3d27c6406738
+INFO     root:HttpTools.py:56 {"endTime": "2020-11-18 23:59:59", "partnerId": "", "limit": "10", "storeName": "", "storeId": "", "startTime": "2020-11-18 00:00:00", "page": "1"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"PAGING","data":{"body":[],"paging":{"first":"1","before":"1","current":"1","last":"0","next":"0","limit":"10","totalPages":"0","totalItems":"0"}}}
+INFO     root:assistantappApi.py:1098 /inspect/listdone	巡店记录列表
+INFO     root:CommonKeyWord.py:70 InspectListerrno:0
+INFO     root:CommonKeyWord.py:70 巡店记录列表成功断言结果：0

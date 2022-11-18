@@ -1,0 +1,221 @@
+-
+  key: TAKE
+  url: /order/confirm/prescription
+  method: post
+  data:
+    orderNo: 92042611603425991678
+  Assert:
+    errno: '0'
+
+-
+  key: TAKE
+  url: /order/index
+  method: post
+  data:
+  Assert:
+    errno: '0'
+-
+  key: TAKE
+  url: /order/paging
+  method: post
+  data:
+    mainTabType: 1
+    limit: 1
+    subTabType: 1
+    page: 1
+  Assert:
+    errno: '0'
+-
+  key: TAKE
+  url: /assistant/get/status
+  method: post
+  data:
+  Assert:
+    errno: '0'
+
+-
+  key: TAKE
+  url: /order/detail
+  method: post
+  data:
+    orderNo: '92072911603747011623'
+  Assert:
+    errno: '0'
+
+-
+  key: TAKE
+  url: /assistant/assistant/list
+  method: post
+  data:
+    content:
+  Assert:
+    errno: '0'
+-
+  key: DSTORE
+  url: /teacher/consult
+  method: post
+  data:
+    memberId: 1
+    fromType: 0
+    partnerOrganId: 0
+  Assert:
+    errno: '0'
+
+-
+  key: DSTORE
+  url: /teacher/mine
+  method: post
+  data:
+    page: 11
+    limit: 10
+  Assert:
+    errno: '0'
+
+-
+  key: DSTORE
+  url: /teacher/displayTab
+  method: post
+  data:
+  Assert:
+    errno: '0'
+
+-
+  key: DSTORE
+  url: /teacher/recommend
+  method: post
+  data:
+    projectSn:
+    mainOrderNo:
+    servicePackageAssistantId:
+    page: 1
+    limit: 10
+    longitude: 118.779246
+    latitude: 31.97192
+    channel: 3
+    partnerOrganId:
+    storeOrganId:
+    city: 南京市
+    locationType: 2
+    isTprs: 1
+  Assert:
+    errno: '0'
+
+-
+  key: DSTORE
+  url: /project/getProjectAdvertising
+  method: post
+  data:
+    projectSn:
+  Assert:
+    errno: '0'
+
+-
+  key: DSTORE
+  url: /teacher/startChat
+  method: post
+  data:
+    groupId: 0
+    advisorMemberId: 16235631
+  Assert:
+    errno: '0'
+
+-
+  key: DSTORE
+  url: /teacher/isShowSwitch
+  method: post
+  data:
+    memberId: 16235631
+    assistantMemberId: 16235631
+  Assert:
+    errno: '0'
+
+-
+  key: DSTORE
+  url: /teacher/existRelate
+  method: post
+  data:
+    customerId: 16235631
+    advisorId: 16235631
+  Assert:
+    errno: '0'
+
+-
+  key: DSTORE
+  url: /release/detail
+  method: post
+  data:
+    assistantId: 20083717
+    projectName: assistant
+  Assert:
+    errno: '0'
+
+-
+  key: DSTORE
+  url: /evaluate/choice
+  method: post
+  data:
+    assistantId: 200678
+  Assert:
+    errno: '0'
+
+-
+  key: DSTORE
+  url: /teacher/advisorDetail
+  method: post
+  data:
+    assistantId: 200678
+  Assert:
+    errno: '0'
+
+-
+  key: DSTORE
+  url: /teacher/relate
+  method: post
+  data:
+    assistantMemberId: 16232469
+    type: 1
+  Assert:
+    errno: '171500'
+
+
+-
+  key: DSTORE
+  url: /member/getPushLink
+  method: post
+  data:
+    version: 5.3.0.2
+    memberId: 16235631
+  Assert:
+    errno: '0'
+
+
+-
+  key: DSTORE
+  url: /adviser/sendWaitPayNotice
+  method: post
+  data:
+    fromSysCode:
+    fromMemberId:
+    toSysCode:
+    toMemberId:
+  Assert:
+    errno: '0'
+
+#-
+#  key: DSTORE
+#  url: /wx/isSub
+#  method: post
+#  data:
+#    openId: '12'
+#    assistantMemberId: 0
+#  Assert:
+#    errno: '0'
+
+
+-
+  key: DSTORE
+  url: /adviser/toHomePushRel
+  method: post
+  data:
+  Assert:
+    errno: '0'

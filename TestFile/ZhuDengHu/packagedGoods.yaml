@@ -1,0 +1,61 @@
+#统一交易页实物商品带优惠权益
+
+token_01:
+  -
+      #公众号登录
+      key: MSGBACKEND
+      url: /extTemplate/operate
+      method: post
+      data:
+        operate: set
+        key: verifyCode_valid_13813904992
+        data: 123456
+
+token_02:
+  -
+      #公众号登录
+      key: LOGIN
+      url: /login/login
+      method: post
+      data:
+        mobile: 13813904992
+        code: 123456
+
+unifyproduct:
+  -
+    #商品详情页
+    key: UNIFYCART
+    url: /unifyproduct/details
+    method: post
+    data:
+      skuNo: 578-849957096135852032
+      channel: 17
+      channelId: 0
+    Assert:
+      errno: 0
+
+count:
+  -
+    #获取渠道
+      key: CONFIRMCREATE
+      url: /unifyorder/confirm/create
+      method: post
+      data:
+         skuNos:
+           -
+             578-849957096135852032
+         requestNo: 1658304298092
+         channel: 17
+         saleMerchantId : 539
+         saleStoreId : 74596
+         assistantId : 0
+         shareMemberId : 0
+         partnerMerchantId : 0
+         partnerOpenId : 0
+         channelId :  0
+         orderSource: 0
+         orderMethod : 3
+         quantity: 1
+         showInsuredMember: false
+      Assert:
+        errno: 0

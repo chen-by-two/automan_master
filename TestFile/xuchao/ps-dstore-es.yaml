@@ -1,0 +1,95 @@
+#商保新会员
+
+-
+  #批量修改在线状态
+  key: ES
+  url: /assistant/batchOnline
+  method: post
+  data:
+    type: 0
+    assistantId:
+      -
+        0
+  Assert:
+    errno: '0'
+
+
+-
+  #新增
+  key: ES
+  url: /assistant/create
+  method: post
+  data:
+    assistantId: 0
+    memberId: 0
+    starClass: 0.0
+    helpNum: 0
+    location:
+    lon:
+    lat:
+    isOnline: 0
+    storeOrganId: 0
+    partnerOrganId: 0
+    pharmacist: 0
+    city:
+    cityMd:
+    status: 0
+    isTrain: 0
+  Assert:
+    errno: '0'
+
+
+
+
+-
+  #详情
+  key: ES
+  url: /assistant/detail
+  method: post
+  data:
+    assistantId: 20083717
+    assistantMemberId: 16235631
+  Assert:
+    errno: '0'
+
+
+
+-
+  #查询
+  key: ES
+  url: /assistant/paging
+  method: post
+  data:
+    assistantIds:
+      -
+        20083717
+    location:
+    isOnline:
+    storeOrganId:
+    storeOrganIds:
+      -
+        0
+    partnerOrganId:
+    pharmacist:
+    partnerOrganIds:
+      -
+        0
+    page:
+    limit:
+
+  Assert:
+    errno: '0'
+
+
+-
+  #ids
+  key: ES
+  url: /assistant/ids
+  method: post
+  data:
+    assistantIds:
+      -
+        0
+  Assert:
+    errno: '0'
+

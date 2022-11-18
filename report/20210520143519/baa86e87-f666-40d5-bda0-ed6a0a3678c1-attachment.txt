@@ -1,0 +1,11 @@
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "0000"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"306","account":"18099990000","member_id":"15961232","full_name":"\u5f20\u5927\u4ed9","created_at":"2020-03-11 01:09:59","updated_at":"2021-05-20 14:36:17","last_login_at":"2021-05-20 14:36:17","head_img":"","role":"\u52a9\u624b\u5185\u90e8\u4e13\u7528","role_id":"0","v4_role_id":"ZS1048","token":"07a0795d-0eb8-4477-90b1-3e811babb8ac"}}
+INFO     root:assistantappApi.py:22 /user/logindone	账号登录
+INFO     root:CommonKeyWord.py:70 token：07a0795d-0eb8-4477-90b1-3e811babb8ac
+INFO     root:CommonKeyWord.py:70 Canceldsql：SELECT id FROM `cn_uniondrug_module_assistant`.`work_list` WHERE `storeId` = '160846' AND `userId` = '306' AND `inDate` = '20210518';
+INFO     root:CommonKeyWord.py:70 Canceld：None
+INFO     root:HttpTools.py:56 {"id": null, "remark": "\u53d6\u6d88\u95e8\u5e97\u4efb\u52a1\u81ea\u52a8\u531620210513", "type": 1, "userId": "306"}
+INFO     root:HttpHandler.py:41 {"errno":"1","error":"\u5fc5\u987b\u7684\u5c5e\u6027'App\\Structs\\Requests\\Work\\CancelRequest::$id'\u5728\u5165\u53c2\u4e2d\u672a\u5b9a\u4e49","dataType":"ERROR","data":{}}
+INFO     root:assistantappApi.py:1479 /work/cancel	done	取消门店任务
+INFO     root:CommonKeyWord.py:70 WorkCancelerrno:1
+INFO     root:CommonKeyWord.py:70 门店任务列表断言结果：0

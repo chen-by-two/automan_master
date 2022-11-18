@@ -1,0 +1,29 @@
+#rc环境实物商品的sku
+skuNos:
+  578-956612294983286784
+skuNos2:
+  578-988807100392013824
+skuNos3:
+  578-988810502337462272
+channel:
+  7
+env_rc:
+  uniondrug.net
+Authorization:
+  1
+errno:
+  0
+err:
+  320005
+sourceId1:
+  23431358
+sourceId2:
+  23431359
+sourceId3:
+  23433693
+sourceId4:
+  23434724
+mobile:
+  15950572929
+LogintCaptcha:
+  123456

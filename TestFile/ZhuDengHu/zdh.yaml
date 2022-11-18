@@ -1,0 +1,34 @@
+getLoginCaptcha:
+  #查询公众号手机登录验证码的
+  SELECT `data` FROM `cn_uniondrug_module_sms`.`message` WHERE mobile = "15005150023" ORDER BY gmtCreated DESC LIMIT 1;
+mobileOrder:
+  13813904992
+env:
+  uniondrug.net
+skuNo:
+  578-892369609305358336
+resourceId:
+  23433872
+skuNo1:
+  578-847792818180063232
+skuNo2:
+  578-892369609305358336
+skuNo3:
+  578-849957096135852032
+skuNo4:
+  171270-1006157343706054656
+errno:
+  0
+LogintCaptcha:
+  123456
+channel:
+  7
+memberId:
+  16234580
+err:
+  320005
+code:
+  11111
+channel17:
+  17
+

@@ -1,0 +1,151 @@
+#店员模块
+
+-
+  #店员退款次数
+  key: CLERK
+  url: /assistant/assistantRefundCount
+  method: post
+  data:
+    assistantId: 123456
+    startDate:
+    endDate:
+  Assert:
+    errno: '0'
+
+-
+  #店员退款风控
+  key: CLERK
+  url: /assistant/assistantRefundRiskManage
+  method: post
+  data:
+    type: 1
+  Assert:
+    errno: '0'
+
+-
+  #店员详情
+  key: CLERK
+  url: /assistant/detail
+  method: post
+  data:
+    id: 0
+    memberId: 16235631
+    account: 18795986844
+    storeOrganId: 0
+    wxUnionId:
+    appleId:
+    role: 0
+    isMore: 0
+  Assert:
+    errno: '0'
+
+
+-
+  #获取门店店员列表（分页）
+  key: CLERK
+  url: /assistant/ids
+  method: post
+  data:
+    ids:
+      -
+        1123
+    status: 0
+  Assert:
+    errno: '0'
+
+-
+  #成员ID
+  key: CLERK
+  url: /assistant/memberIds
+  method: post
+  data:
+    memberIds:
+      -
+        0
+    account:
+    accounts:
+      -
+        1
+    name:
+    role: 0
+    status: 0
+    isALl: 0
+  Assert:
+    errno: '0'
+
+-
+  #新详情
+  key: CLERK
+  url: /assistant/new/detail
+  method: post
+  data:
+    assistantId: 20083717
+  Assert:
+    errno: '0'
+
+-
+  #获取门店店员数量
+  key: CLERK
+  url: /assistant/store/count
+  method: post
+  data:
+    storeOrganIds:
+      -
+        0
+    partnerOrganId: 0
+    statusList:
+      -
+        0
+  Assert:
+    errno: '0'
+
+
+-
+  #获取门店店长数据
+  key: CLERK
+  url: /assistant/storeRoleList
+  method: post
+  data:
+    storeOrganId:
+      -
+        7590
+    role: 0
+    status:
+      -
+        0
+    keywords:
+  Assert:
+    errno: '0'
+
+-
+  #完成的行为
+  key: CLERK
+  url: /level/acFinish
+  method: post
+  data:
+    orderNo:
+    actionType: 0
+    assistantId: 0
+    unionId:
+    assistantMemberId: 0
+    assistantName:
+    assistantMobile:
+    partnerOrganId: 0
+    storeOrganId:
+    type: 0
+    goalId:
+    sendOpportunity:
+    amount:
+  Assert:
+    errno: '0'
+
+
+-
+  #完成的行为
+  key: CLERK
+  url: /pay/account/detail
+  method: post
+  data:
+    assistantId: 20083717
+  Assert:
+    errno: '0'

@@ -1,0 +1,18 @@
+# 测试环境 优惠权益方案数据预置
+mobile:
+  # 后台登录帐号
+  15250989839
+updateCapthaAll:
+  # 初始化后台验证码
+  UPDATE `cn_uniondrug_module_data`.`captcha` SET `status` = 0 WHERE `mobile` = 15250989839;
+updateCaptchaCode:
+  #设定后台登录验证码
+  UPDATE `cn_uniondrug_module_data`.`captcha` SET `status`= 1 , `gmtExpired` = '2120-09-23 10:04:52' WHERE id = 9301;
+LoginCaptcha:
+  # 后台验证码-写死
+  762538
+errno:
+  # 断言预置
+  0
+envt:
+  turboradio.cn

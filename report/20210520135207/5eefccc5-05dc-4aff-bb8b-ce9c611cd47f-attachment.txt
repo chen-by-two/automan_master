@@ -1,0 +1,10 @@
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "0000"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"306","account":"18099990000","member_id":"15961232","full_name":"\u5f20\u5927\u4ed9","created_at":"2020-03-11 01:09:59","updated_at":"2021-05-20 13:53:15","last_login_at":"2021-05-20 13:53:15","head_img":"","role":"\u52a9\u624b\u5185\u90e8\u4e13\u7528","role_id":"0","v4_role_id":"ZS1048","token":"99b498fe-a01d-4520-90ab-02dd4b76ee5f"}}
+INFO     root:assistantappApi.py:22 /user/logindone	账号登录
+INFO     root:CommonKeyWord.py:70 token：99b498fe-a01d-4520-90ab-02dd4b76ee5f
+INFO     root:CommonKeyWord.py:70 Canceld：None
+INFO     root:HttpTools.py:56 {"id": null, "remark": "\u53d6\u6d88\u95e8\u5e97\u4efb\u52a1\u81ea\u52a8\u531620210513", "type": 1, "userId": "306"}
+INFO     root:HttpHandler.py:41 {"errno":"1","error":"\u5fc5\u987b\u7684\u5c5e\u6027'App\\Structs\\Requests\\Work\\CancelRequest::$id'\u5728\u5165\u53c2\u4e2d\u672a\u5b9a\u4e49","dataType":"ERROR","data":{}}
+INFO     root:assistantappApi.py:1479 /work/cancel	done	取消门店任务
+INFO     root:CommonKeyWord.py:70 WorkCancelerrno:1
+INFO     root:CommonKeyWord.py:70 门店任务列表断言结果：0

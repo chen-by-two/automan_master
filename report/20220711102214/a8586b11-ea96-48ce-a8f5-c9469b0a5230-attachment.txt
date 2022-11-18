@@ -1,0 +1,3 @@
+INFO     root:HttpTools.py:56 {"orderNo": "92031001603301020134", "lockList": [{"couponId": "164691929914300011", "memberId": 228}]}
+INFO     root:HttpHandler.py:41 {"errno":1300016,"error":"卡状态异常，不支持此次抵扣 ","dataType":"ERROR","data":{},"fail":true,"success":false}
+INFO     root:promoteCenterApi.py:413 /lock/lockCard	done	锁定卡入口

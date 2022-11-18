@@ -1,0 +1,108 @@
+#接单模块
+
+
+-
+  #获取接单状态
+  key: TAKE
+  url: /assistant/get/status
+  method: post
+  data:
+    assistantId: 20083717
+    storeOrganId:
+  Assert:
+    errno: '0'
+
+
+
+-
+  #门店信息
+  key: TAKE
+  url: /assistant/store
+  method: post
+  data:
+    storeId: 171272
+  Assert:
+    errno: '0'
+
+
+-
+  #查询设置的商品信息特殊接口
+  key: TAKE
+  url: /good/purchase
+  method: post
+  data:
+  Assert:
+    errno: '0'
+
+
+-
+  #自动完成订单-接单
+  key: TAKE
+  url: /mq/express/delay/automatic/accept
+  method: post
+  data:
+  Assert:
+    errno: '0'
+
+
+-
+  #获取立减规则
+  key: TAKE
+  url: /order/expressRule
+  method: post
+  data:
+  Assert:
+    errno: '0'
+
+
+-
+  #订单搜索
+  key: TAKE
+  url: /order/search
+  method: post
+  data:
+    memberId: 16235631
+    assistantId: 20083717
+    status: 1
+    page: 1
+    limit: 10
+  Assert:
+    errno: '0'
+
+
+-
+  #详情
+  key: TAKE
+  url: /partner/express/load/detail
+  method: post
+  data:
+    memberId: 16235631
+  Assert:
+    errno: '0'
+
+
+-
+  #获取推药记录
+  key: TAKE
+  url: /recommend/detail
+  method: post
+  data:
+    batchId:
+  Assert:
+    errno: '0'
+
+-
+  #创建推药记录
+  key: TAKE
+  url: /recommend/create
+  method: post
+  data:
+    adviserMemberId: 16235631
+    customerMemberId:
+    assistantId: 20083717
+    partnerOrganId:
+    storeOrganId:
+      drugs:
+        -
+  Assert:
+    errno: '0'

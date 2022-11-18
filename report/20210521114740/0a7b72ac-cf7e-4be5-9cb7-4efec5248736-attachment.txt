@@ -1,0 +1,11 @@
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "0000"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"306","account":"18099990000","member_id":"15961232","full_name":"\u5f20\u5927\u4ed9","created_at":"2020-03-11 01:09:59","updated_at":"2021-05-21 11:48:48","last_login_at":"2021-05-21 11:48:49","head_img":"","role":"\u52a9\u624b\u5185\u90e8\u4e13\u7528","role_id":"0","v4_role_id":"ZS1048","token":"61e89028-ecfe-4efc-8a52-e8ffb61037de"}}
+INFO     root:assistantappApi.py:22 /user/logindone	账号登录
+INFO     root:CommonKeyWord.py:70 token：61e89028-ecfe-4efc-8a52-e8ffb61037de
+INFO     root:HttpTools.py:56 {"workId": "66666"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{}}
+INFO     root:assistantappApi.py:1502 /work/accept	done	领取门店任务
+INFO     root:HttpTools.py:56 {"appealInfo": {}, "appealReason": 3, "communicateType": 2, "workId": "66666"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"272","userId":"306","userName":"","userMobile":"","workId":"66666","workType":"0","workTypeText":"","workRelatedId":"0","assignTime":"","cancelTime":"","arrivalTime":"","departureTime":"","durationTime":"","assignCount":"0","workStatus":"0","workStatusText":"","chainName":"","storeId":"0","storeName":"","storestatus":"0","storestatusText":"","communicateType":"2","communicateTypeText":"\u7535\u8bdd\/\u8bed\u8a00\/\u89c6\u9891\u6c9f\u901a","communicateImages":[],"remark":"","summary":[],"appealReason":"3","appealInfo":{"timeLackReason":"","addrBefore":{"address":"","longitude":"0","latitude":"0"},"addrAfter":{"address":"","longitude":"0","latitude":"0"}}}}
+INFO     root:assistantappApi.py:1534 /workRecord/create	done	完成线上门店任务
+INFO     root:CommonKeyWord.py:70 WorkRecordStarterrno:0

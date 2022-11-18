@@ -1,0 +1,20 @@
+#药店宝用户业务
+
+-
+  key: drugstore
+  url: /drugstoreuser/merchant/page
+  method: post
+  data:
+    organizationType: 0
+    shortName:
+    rootId: 0
+    page: 1
+    limit: 5
+    status: 0
+    organStructure: 0
+    businessType:
+      -
+        0
+    isNeedCurrent: 0
+  Assert:
+    errno: '0'

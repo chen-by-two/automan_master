@@ -1,0 +1,19 @@
+所属模块	接口名称	host	path	method	headers	params	data	desc
+financeData	partnerDetail	http://ps-finance-data.turboradio.cn	/partner/detail	POST	{"Content-Type": "application/json;charset=UTF-8"}	None	{"organizationId": "578"}	获取商户的明细
+financeData	partnerBillInfo	http://ps-finance-data.turboradio.cn	/partner/bill/info/detail	POST	{"Content-Type": "application/json;charset=UTF-8"}	None	{"unitId":"578"}	核算单位票据信息
+financeData	partnerWorker	http://ps-finance-data.turboradio.cn	/partner/worker/paging	POST	{"Content-Type": "application/json;charset=UTF-8"}	None	{"organizationId": "578","page": "1","limit": "5"}	获取商户5条用户信息
+financeData	partnerSetting	http://ps-finance-data.turboradio.cn	/partner/setting/detail	POST	{"Content-Type": "application/json;charset=UTF-8"}	None	{"organizationId": "578"}	获取商户的结算配置
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								
+								

@@ -1,0 +1,94 @@
+#查询memberid：
+find_memberid:
+  SELECT id FROM `cn_uniondrug_middleend_usercenter`.`uc_member` WHERE `account` = '15380905486' ;
+
+mobile: 15380905486
+
+env: "uniondrug.net"
+
+#获取微信token:
+find_wx_token:
+  SELECT token FROM `cn_uniondrug_backend_auth`.`member_token` WHERE `memberId` = '6422505' AND channel = 'wechat';
+
+#获取统一交易支付信息：
+find_payment_no:
+  SELECT payment_no FROM `cn_uniondrug_middleend_paymentcenter`.`pmc_pay_cashier` WHERE `out_trade_no` = '92062801603632000258';
+
+find_trade_no:
+ SELECT trade_no FROM `cn_uniondrug_middleend_paymentcenter`.`pmc_pay_cashier` WHERE `out_trade_no` = '92062801603632000258';
+
+find_pay_account_id:
+ SELECT pay_account_id FROM `cn_uniondrug_middleend_paymentcenter`.`pmc_pay_cashier` WHERE `out_trade_no` = '92062801603632000258';
+
+#清除签名信息
+delete_sign:
+  UPDATE `cn_uniondrug_middleend_usercenter`.`uc_member_credentials` SET `deleted` = 1 WHERE `member_id` = 6422505
+
+#成功返回码:
+success_errno: '0'
+
+#成功返回码:
+successno: 0
+
+
+#上海得一
+#运费活动+运费券
+#试算后金额
+FreightActivitySaleAmount: "64.27"
+
+#重庆万家燕
+#单品促销
+#活动id
+activityId: "20220617100953427267"
+#试算后金额
+saleAmount: "46.4"
+
+#搜索关键词：
+goodsInternalId: "9692"
+searchContent: "卤米松乳膏"
+goodstradeCode: "4895013205209"
+symptoms1: "接触性皮炎"
+symptoms2: "发烧"
+reNew: "44494"
+freight: "61428"
+
+#药品信息：
+tradeCode:  "E1Ju%2BbB7dn7uDDb5auwE9gl3WOEx"
+drugName:  "澳能"
+commonName:  "卤米松乳膏"
+brand:  "澳能"
+price:  "26.50"
+commonName2: "复方醋酸地塞米松乳膏"
+
+DTPcommonName: "马来酸阿伐曲泊帕片"
+DTPSalesCommonName1: "盐酸托莫西汀口服溶液"
+DTPSalesCommonName2: "人血白蛋白"
+
+DTPPriceCommonName1: "醋酸甲羟孕酮片"
+DTPPriceCommonName2: "吡非尼酮胶囊"
+
+CategoryCommonName: "弹性创可贴"
+CategorySalesCommonName1: "隐形眼镜多功能护理液（傲滴乐明）"
+CategorySalesCommonName2: "弹性创可贴"
+
+CategoryPriceCommonName1: "独活"
+CategoryPriceCommonName2: "电动轮椅"
+
+#换新/运费药品（商户中心配置直付附加换新+运营中心奖励规则管理配置补贴+商品中心药品实际商品批准文号为国药准字）
+RenewCommonName: "复方桔梗止咳片"
+RenewInternalId: "61428"
+RenewtradeCode: "6943712731678"
+
+#运费药品
+#FreightCommonName: "脑络通胶囊(白云山)"
+##FreightInternalId: "44494"
+##FreighttradeCode: "6900372281585"
+
+#单品促销活动药品（满一件打8折）
+PromotionCommonName: "盐酸氨基葡萄糖胶囊"
+PromotionInternalId: "59522"
+PromotiontradeCode: "4895013208378"
+
+
+#可以搜索到的药品
+#6675、8128、61187、6632、6036、29528、24192、61306、24997、8130、7639

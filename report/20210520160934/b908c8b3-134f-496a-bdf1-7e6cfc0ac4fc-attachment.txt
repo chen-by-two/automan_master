@@ -1,0 +1,4 @@
+INFO     root:HttpTools.py:56 {"type": "login", "mobile": 18099990000}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{}}
+INFO     root:assistantappApi.py:43 /code/senddone	获取验证码
+INFO     root:CommonKeyWord.py:70 sql:SELECT captcha FROM `cn_uniondrug_module_data`.`captcha` where mobile = 18099990000 ORDER BY id desc LIMIT 1;

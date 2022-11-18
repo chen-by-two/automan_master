@@ -1,0 +1,61 @@
+#通联支付
+
+-
+#  #支付流水查询
+  key: queryTradeOrder
+  url: /query/order/queryTradeOrder
+  method: post
+  data:
+       bizScene: null
+       accountId: 4
+       methodCode: CWXPAY
+       outTradeNo: 100192072601603737240764
+       paymentNo: 2022072601452580964
+  Assert:
+    errno: 0
+
+-
+
+    key: goPay
+    url: /payment/prePay/goPay
+    method: post
+    data:
+      paymentNo: 2022072601455031560
+      accountId: 4
+      methodCode: CWXPAY
+      outTradeNo: 1001920726016037396201612
+      orderNo: 92072601603739620161
+      body: 药联增值服务
+      spBillCreateIp: 218.94.117.202
+      payAmount: 0.01
+      openId: oylyluDiSxgKp_OzXEYdNf_yOgCw
+      authCode: null
+      tradeType: null
+      buyerId: null
+      merchantId: 122270
+      paymentType: PD
+      sceneInfo: null
+      transmission:
+        env: release
+      memberId: 16234964
+      quitUrl: null
+      callback: null
+      deviceNo: null
+      storeNo: null
+      telephone: null
+      cancelTimeout: null
+      hb_fq_num: null
+      hb_fq_seller_percent: null
+    Assert:
+      errno: 0
+
+-
+#unifycart/product/spec/query
+    key: SPECQUERY
+    url: /unifycart/product/spec/query
+    method: post
+    data:
+       channel : 17
+       goodsNo : 539-996105125279825920
+    Assert:
+      errno: 0

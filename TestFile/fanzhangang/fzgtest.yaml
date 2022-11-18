@@ -1,0 +1,18 @@
+mobile:
+  18354299687
+errorno:
+  "0"
+env:
+  uniondrug.net
+getLoginCaptcha:
+  select captcha from cn_uniondrug_module_data.captcha where mobile='18354299687' ORDER BY gmtCreated desc LIMIT 1
+memberId1:
+  "16236586"
+dataType1:
+  "PAGING"
+dataType2:
+  "LIST"
+dataType3:
+  "OBJECT"
+assistantId1:
+  "20083722"

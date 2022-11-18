@@ -1,0 +1,9 @@
+INFO     root:HttpTools.py:56 {"type": "login", "mobile": 18099990000}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{}}
+INFO     root:assistantappApi.py:43 /code/senddone	获取验证码
+INFO     root:CommonKeyWord.py:70 sql:SELECT captcha FROM `cn_uniondrug_module_data`.`captcha` where mobile = 18099990000 ORDER BY id desc LIMIT 1;
+INFO     root:CommonKeyWord.py:70 sql查询结果：[{'captcha': '3853'}]
+INFO     root:CommonKeyWord.py:70 验证码：3853
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "3853"}
+INFO     root:HttpHandler.py:41 {"errno":"280016","error":"\u9a8c\u8bc1\u7801\u6821\u9a8c\u5931\u8d25","dataType":"ERROR","data":{}}
+INFO     root:assistantappApi.py:65 /user/sms/logindone	验证码登录

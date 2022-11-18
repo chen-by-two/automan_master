@@ -1,0 +1,32 @@
+#yaml文件中冒号后必须有空格！
+
+UnfreezeAssistantMobile: 15100001111
+
+ApproveMobile: 15380905486
+
+password: '0000'
+
+env: uniondrug.net
+
+Errno: '0'
+
+#查询数据
+SelectAssistant:
+ SELECT data FROM `cn_uniondrug_module_sms`.`message` WHERE mobile = 19400000000
+
+# SELECT * FROM `cn_uniondrug_module_clerk`.`assistant` WHERE `account` = '15100001111'
+
+#更新店员状态为冻结
+UpdateAssistantStatus:
+ UPDATE cn_uniondrug_module_clerk.assistant set status = 0 where account = 15100001111;
+
+#插入数据
+InsertAssistant:
+ INSERT INTO `cn_uniondrug_module_clerk`.`assistant`(`id`, `account`, `unionId`, `memberId`, `name`, `storeOrganId`, `partnerOrganId`, `role`, `status`, `pharmacistStatus`, `gmtCreated`, `gmtUpdated`, `merchantType`, `wxUnionId`, `appleId`) VALUES (20083711, '15100001112', '5074fffcae7596463dfc276dbfa2e561', 16234977, '张嘎嘎', 171283, 171282, 1, 0, 1, '2021-09-27 16:54:18', '2022-03-16 16:17:06', 101, '', '')
+
+#删除数据
+DeleteAssistant:
+ DELETE FROM `cn_uniondrug_module_clerk`.`assistant` WHERE `id` = 20083711
+
+#INSERT INTO `cn_ud_mod_approval`.`tp_process_setting`(`processSettingId`, `approveSettingId`, `processType`, `customDuplicater`, `processName`, `approverType`, `operateType`, `optionalType`, `approverArea`, `nextId`, `gmtCreated`, `gmtUpdated`) VALUES (2557, 1, 2, 0, '抄送人', 1, 1, 1, 1, '0', '2021-12-22 15:01:13', '2021-12-22 15:01:13');
+#INSERT INTO `cn_ud_mod_approval`.`tp_process_setting`(`processSettingId`, `approveSettingId`, `processType`, `customDuplicater`, `processName`, `approverType`, `operateType`, `optionalType`, `approverArea`, `nextId`, `gmtCreated`, `gmtUpdated`) VALUES (2558, 1, 1, 0, '大佬审批', 1, 3, 1, 1, '2557', '2021-12-22 15:01:13', '2021-12-22 15:01:13');

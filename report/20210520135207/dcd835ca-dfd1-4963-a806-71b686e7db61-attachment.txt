@@ -1,0 +1,9 @@
+INFO     root:HttpTools.py:56 {"mobile": 18099990000, "code": "0000"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"306","account":"18099990000","member_id":"15961232","full_name":"\u5f20\u5927\u4ed9","created_at":"2020-03-11 01:09:59","updated_at":"2021-05-20 13:52:37","last_login_at":"2021-05-20 13:52:39","head_img":"","role":"\u52a9\u624b\u5185\u90e8\u4e13\u7528","role_id":"0","v4_role_id":"ZS1048","token":"456e2e5d-6d40-41c2-9b42-de9ccfaab97b"}}
+INFO     root:assistantappApi.py:22 /user/logindone	账号登录
+INFO     root:CommonKeyWord.py:70 token：456e2e5d-6d40-41c2-9b42-de9ccfaab97b
+INFO     root:HttpTools.py:56 {"id": "50511"}
+INFO     root:HttpHandler.py:41 {"errno":"0","error":"","dataType":"OBJECT","data":{"id":"0","userName":"","storeId":"0","storeName":"","storeFullName":"","partnerName":"","businessStartTime":"","businessEndTime":"","storeLogo":"","storePhone":"","storeAddress":"","storeSubAddress":"","remark":"","address":"","mapLat":"","mapLon":"","startLat":"","startLon":"","status":"","createdAt":"","startTime":"","endTime":"","inspectTime":"","organizationStoreId":"","images":[],"thumbs":[],"trains":[]}}
+INFO     root:assistantappApi.py:1121 /inspect/detaildone	巡店记录详情
+INFO     root:CommonKeyWord.py:70 InspectDetailerrno:0
+INFO     root:CommonKeyWord.py:70 巡店记录详情成功断言结果：0

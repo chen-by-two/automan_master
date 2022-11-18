@@ -1,0 +1,205 @@
+# 环境 财务共享平台登录
+envt:
+  uniondrug.net
+
+#登录账号
+mobile:
+  # 帐号
+  15256908297
+mobile1:
+  # 专门测通告的帐号-国药控股635
+  15256908298
+password:
+  #  商家服务平台登录密码
+  123456
+account:
+  # 账号
+  15256908297
+account1:
+  # 专门测通告的帐号-国药控股635
+  15256908298
+credentials1:
+  #  商家服务平台登录密码
+  123456
+
+#sql 更新
+updateCapthaAll:
+  # 财务共享平台-初始化后台验证码
+  UPDATE `cn_uniondrug_module_data`.`captcha` SET `status` = 0 WHERE `mobile` = 15256908297;
+updateCaptchaCode:
+  #财务共享平台-设定后台登录验证码
+  UPDATE `cn_uniondrug_module_data`.`captcha` SET `status`= 1 , `gmtExpired` = '2122-09-23 10:04:52' WHERE id = 18262;
+LoginCaptcha:
+  # 财务共享平台-后台验证码写死
+  255154
+errno:
+  # 断言预置
+  0
+
+#sql 更新
+#查询公共数据
+#查询公共数据-连锁下的公告未读数，rc：测试数据勿动memberId：16236666，国药控股635
+selectAnnouncement:
+  SELECT COUNT(*) FROM `cn_uds_fin_com`.`announcement` a INNER JOIN `cn_uds_fin_com`.`announcement_partner` ap ON ap.`memberId` = '16236666' AND ap.`organizationId` = '635' AND ap.read  =0 AND a.`status` = 1 AND a.id=ap.announcementId;
+
+#查询公共数据-连锁下的公告未读数，rc：测试数据勿动memberId：16236666，国药控股635
+selectOnlineInvoice:
+  SELECT onlineInvoice FROM `cn_uds_fin_com`.`worker_man` WHERE `memberId` = '16236666' AND `unitId` = '635';
+
+#查询公共数据-连锁下的公告名，rc：测试数据勿动memberId：16236666，国药控股635
+selectAnnouncementName:
+  SELECT a.`name` FROM `cn_uds_fin_com`.`announcement` a INNER JOIN `cn_uds_fin_com`.`announcement_partner` ap ON ap.`memberId` = '16236666' AND ap.`organizationId` = '635' AND ap.read  =0 AND a.`status` = 1 AND a.id=ap.announcementId ORDER BY ap.id DESC;
+
+#查询公共数据-连锁下的公告名，rc：测试数据勿动memberId：16236666，国药控股635
+selectAnnouncementId:
+  SELECT ap.`announcementId` FROM `cn_uds_fin_com`.`announcement` a INNER JOIN `cn_uds_fin_com`.`announcement_partner` ap ON ap.`memberId` = '16236666' AND ap.`organizationId` = '635' AND a.`status` = 1 AND a.id=ap.announcementId ORDER BY ap.id DESC;
+
+#查询公共数据-商家服务平台版本
+selectBusinessCenterVersion:
+  SELECT `business_center_version`.`version`  FROM cn_uds_fin_com.`business_center_version` ORDER BY `business_center_version`.`id` DESC LIMIT 1;
+
+
+#--------------------------------------------------- 财务结算------------------------------------
+#直付订单入财务结算
+#删除订单扩展表-settlement_extend
+deleteSettlementExtend:
+  delete FROM `cn_udc_fin_statement`.`settlement_extend` WHERE `order_no` = '92061611603549650106';
+#删除订单扩展表-direct_settlement
+deleteDirectSettlement:
+  delete FROM `cn_udc_fin_statement`.`direct_settlement` WHERE `order_no` = '92061611603549650106';
+#直付订单入财务结算后，查询数据库-direct_settlement、settlement_extend
+selectDirectSettlement:
+  SELECT order_no FROM `cn_udc_fin_statement`.`direct_settlement` WHERE `order_no` = '92061611603549650106';
+selectSettlementExtend:
+  SELECT order_no FROM `cn_udc_fin_statement`.`settlement_extend` WHERE `order_no` = '92061611603549650106';
+
+#直付订单商品替换入财务结算
+#删除直付订单入direct_clean_goods表
+deleteDirectCleanGoods:
+  delete FROM `cn_udc_fin_statement`.`direct_clean_goods` WHERE `order_no` = '92061611603549650106';
+#查询直付订单入direct_clean_goods表
+selectDirectCleanGoods:
+  SELECT order_no FROM `cn_udc_fin_statement`.`direct_clean_goods` WHERE `order_no` = '92061611603549650106';
+
+selectPayoutStatemntNo:
+  # 查询直付结算单
+  SELECT statement_no FROM `cn_udc_fin_statement`.`direct_settlement` WHERE `unit_id` = '635' AND `paid_date` = '2022-04-18';
+selectPayBillNo:
+  # 查询票据中心开票单
+  select bill_no from `cn_udc_fin_bill`.`bill` WHERE `business_no` in (SELECT statement_no FROM `cn_udc_fin_statement`.`direct_settlement` WHERE `unit_id` = '635' AND `paid_date` = '2022-04-18');
+
+#直付订单推理赔流水
+#更新direct_equity_claim表
+updateDirectEquityClaim:
+  update `cn_udc_fin_statement`.`direct_equity_claim` set policy_no ='', insurer_id = '', claimed_amount = ''WHERE `order_no` = '92061611603549650106';
+#查询direct_equity_claim表的policy_no
+selectPolicyNo:
+  SELECT policy_no FROM `cn_udc_fin_statement`.`direct_equity_claim` WHERE `order_no` = '92061611603549650106';
+#查询direct_equity_claim表的claimed_amount
+selectClaimedAmount:
+  SELECT claimed_amount FROM `cn_udc_fin_statement`.`direct_equity_claim` WHERE `order_no` = '92061611603549650106';
+
+
+#  重置直付结算单
+updateDirectSettlement1:
+  #  重置订单表
+  UPDATE cn_udc_fin_statement.direct_settlement SET reconcile_status =1, statement_no = '' WHERE statement_no IN (SELECT statement_nos FROM (SELECT statement_no statement_nos FROM `cn_udc_fin_statement`.`direct_settlement` WHERE `unit_id` = '635' AND `paid_date` = '2022-04-18') AS s);
+updateDirectSettlement2:
+  #  重置商品替换表
+  UPDATE cn_udc_fin_statement.direct_clean_goods SET bill_no ='', serial_no = '' where statement_no IN (SELECT statement_nos FROM (SELECT statement_no statement_nos FROM `cn_udc_fin_statement`.`direct_settlement` WHERE `unit_id` = '635' AND `paid_date` = '2022-04-18') AS s);
+
+#---------------------------------------------------票据中心------------------------------------
+#推送销售清单
+deleteBillSale:
+  delete FROM `cn_udc_fin_bill`.`bill_sale` WHERE `bill_no` = '20220628100679';
+updateBill:
+  update `cn_udc_fin_bill`.`bill`set bill_status = '0' WHERE `bill_no` = '20220628100679';
+selectBillSale:
+  SELECT bill_no FROM `cn_udc_fin_bill`.`bill_sale` WHERE `bill_no` = '20220628100679';
+
+#查询开票单下的发票号码
+selectInvoiceNo:
+  SELECT invoice_no FROM `cn_udc_fin_bill`.`invoice` WHERE `bill_no` = '20220517100517' and invoice_status =2 and deleted = 0 LIMIT 0,1;
+
+
+
+
+#---------------------------------------------------投保理赔------------------------------------
+#MBS-商品清算入投保理赔
+#删除清算数据
+deleteOrder:
+  delete FROM `cn_udm_insure`.`order` WHERE `order_no`= '92061611603549650106';
+deleteEquity:
+  delete FROM `cn_udm_insure`.`equity` WHERE `order_no`= '92061611603549650106';
+#查询清算后数据
+selectEquity:
+  SELECT order_no FROM `cn_udm_insure`.`equity` WHERE `order_no`= '92061611603549650106';
+selectOrder:
+  SELECT order_no FROM `cn_udm_insure`.`order` WHERE `order_no`= '92061611603549650106';
+
+#MBS-商品替换入投保理赔
+#删除商品替换数据-equity_goods
+deleteEquityGoods:
+  delete FROM `cn_udm_insure`.`equity_goods` WHERE `order_no` = '92061611603549650106';
+#查询替换后数据
+selectEquityGoods:
+  SELECT order_no FROM `cn_udm_insure`.`equity_goods` WHERE `order_no` = '92061611603549650106';
+
+
+#MBS-财务结算推送未理赔直付订单
+#删除商品替换数据-ipackage_order
+deleteIpackageOrder:
+  delete FROM `cn_udm_insure`.`ipackage_order` WHERE `order_no` = '92061611603549650106';
+deleteIpackageOrderReceipt:
+  delete FROM `cn_udm_insure`.`ipackage_order_receipt` WHERE `order_no` = '92061611603549650106';
+deleteClaim:
+  delete FROM `cn_udm_insure`.`claim` WHERE `order_no` = '92061611603549650106';
+#查询替换后数据
+selectIpackageOrder:
+  SELECT order_no FROM `cn_udm_insure`.`ipackage_order` WHERE `order_no` = '92061611603549650106';
+  
+#推送订单理赔材料mbs
+#删除消息发送记录
+deleteOrderAttach:
+  delete FROM `cn_uniondrug_middleend_mbs2`.`mbs_msg_producer` WHERE `msg_key` = '92062911603641531777' AND `tag` = 'orderAttach' AND `topic` = 'finance_insure';
+selectOrderAttach:
+  SELECT count(*) FROM `cn_uniondrug_middleend_mbs2`.`mbs_msg_producer` WHERE `msg_key` = '92062911603641531777' AND `tag` = 'orderAttach' AND `topic` = 'finance_insure';
+
+
+selectApplyOnline:
+  SELECT status FROM `cn_uds_fin_com`.`apply_online` WHERE `unitId` = '555';
+
+
+
+
+#------------------------------------------朱靖宇写-----------------------------------
+env:
+  turboradio.cn
+
+startDate:
+  "2022-04-07"
+
+endDate:
+  "2022-04-20"
+
+latitude:
+  2
+
+policyIds:
+- 5730
+
+projectId:
+  "576"
+
+
+policyNo:
+  "uccyrv"
+
+billNo:
+  "BN202112231635322870799588076054"
+
+insurerId:
+  240371
+
+policyNo1:
+  531312214400000000900

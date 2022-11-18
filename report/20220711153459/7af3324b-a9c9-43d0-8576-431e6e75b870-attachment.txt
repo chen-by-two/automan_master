@@ -1,0 +1,3 @@
+INFO     root:HttpTools.py:56 {"memberId": 228, "tagList": ["49", "165"]}
+INFO     root:HttpHandler.py:41 {"errno":0,"error":"","dataType":"OBJECT","data":7398.00,"fail":false,"success":true}
+INFO     root:promoteCenterApi.py:211 /card/queryCardAmount	done	查询用户卡片总额

@@ -1,0 +1,42 @@
+#yaml文件中冒号后必须有空格！
+
+Businessmobile: 15380905486
+
+env: uniondrug.net
+
+Errno: 0
+
+merchantId: "556"
+
+month: "2022-04"
+
+statisDate: "2022-04-21"
+
+#查询模版id
+find_template_id:
+  SELECT id FROM `cn_uniondrug_activity`.`template` WHERE `type` = '1' AND `channel` = '1' ORDER BY `id` DESC LIMIT 1;
+
+#查询模版奖励id
+find_reward_id:
+ SELECT id FROM `cn_uniondrug_activity`.`template_reward` where reward_type = 5 ORDER BY `id` DESC LIMIT 1
+
+#模版字段为空断言
+tem_empty_errno: '10000'
+
+#福联社字段为空断言
+fls_empty_errno: '1105'
+
+#查询方案id
+find_plan_id:
+  SELECT id FROM `cn_uniondrug_activity`.`activity` order by id DESC LIMIT 1;
+
+#活动未到开启时间断言
+wrong_time_errno: '2000'
+
+#查询方案id
+delete_plan_id:
+ DELETE FROM `cn_uniondrug_activity`.`activity` ORDER BY id DESC LIMIT 1;
+
+# 领取成功断言商品名称
+goodsName: "测试福实物商品222"
+

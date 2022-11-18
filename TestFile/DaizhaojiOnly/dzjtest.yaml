@@ -1,0 +1,30 @@
+mobile:
+  # 后台登录账户
+  13333333001
+env:
+  # 环境
+  "turboradio.cn"
+getLoginCaptcha:
+  # 获取验证码
+  SELECT captcha FROM cn_uniondrug_module_data.captcha WHERE mobile = '13333333001' order by id desc limit 1;
+  #SELECT `data` FROM `cn_uniondrug_module_sms`.`message` WHERE mobile = "15005150023" ORDER BY gmtCreated DESC LIMIT 1;
+memberId:
+  #添加组织用户号
+  6261
+merchantId:
+  #组织id
+  7791
+orgId:
+  9071
+test_host:
+  #测试环境数据库host
+  "udtest.uniondrug.com"
+test_user:
+  #测试环境数据库user
+  "test"
+test_passwd:
+  #测试环境数据库passwd
+  "tset@321abc"
+test_port:
+  #测试环境数据库port
+  6033
